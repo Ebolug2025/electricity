@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: vasgate_electricity_service
+  profiles.active: dev
+  cloud:
+    config:
+      uri: http://172.17.10.83:8888
+      label: development
+
+#spring:
+#  application:
+#    name: vasgate_electricity_service
+#  profiles.active: live
+#  cloud:
+#    config:
+#      uri: http://172.16.10.14:8888
+#      label: vasgate_production

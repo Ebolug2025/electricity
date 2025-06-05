@@ -1,0 +1,17 @@
+2024-12-05 07:11:35,172 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.etranzact.vasgate.electricity.ElectricityApplication]: ElectricityApplication does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-05 07:11:35,210 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.etranzact.vasgate.electricity.ElectricityApplication for test class com.etranzact.vasgate.electricity.ElectricityApplication
+2024-12-05 07:11:35,436 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-05 07:11:35,601 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2024-12-05 07:11:35,631 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Exception on Url - http://localhost:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8888/electricity/dev": Connection refused. Will be trying the next url if available
+2024-12-05 07:11:35,631 WARN o.s.c.c.c.ConfigServicePropertySourceLocator [main] Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/electricity/dev": Connection refused
+2024-12-05 07:11:35,634 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ugochukwuomeje/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/ugochukwuomeje/.m2/repository/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-12-05 07:11:35,637 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "dev"
+2024-12-05 07:11:35,648 INFO c.e.v.e.ElectricityApplication [main] Started ElectricityApplication in 0.393 seconds (process running for 0.867)

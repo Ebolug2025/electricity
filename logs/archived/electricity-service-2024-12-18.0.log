@@ -1,0 +1,34 @@
+2024-12-18 16:24:25,382 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.etranzact.vasgate.electricity.ElectricityApplication]: ElectricityApplication does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-18 16:24:25,428 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.etranzact.vasgate.electricity.ElectricityApplication for test class com.etranzact.vasgate.electricity.ElectricityApplication
+2024-12-18 16:24:26,644 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-18 16:24:26,882 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://172.17.10.83:8888
+2024-12-18 16:24:36,934 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Exception on Url - http://172.17.10.83:8888:org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://172.17.10.83:8888/vasgate_electricity_service/dev/development": Connect timed out. Will be trying the next url if available
+2024-12-18 16:24:36,936 WARN o.s.c.c.c.ConfigServicePropertySourceLocator [main] Could not locate PropertySource: I/O error on GET request for "http://172.17.10.83:8888/vasgate_electricity_service/dev/development": Connect timed out
+2024-12-18 16:24:36,944 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ugochukwuomeje/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/ugochukwuomeje/.m2/repository/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-12-18 16:24:36,956 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "dev"
+2024-12-18 16:24:36,975 INFO c.e.v.e.ElectricityApplication [main] Started ElectricityApplication in 11.494 seconds (process running for 12.02)
+2024-12-18 16:25:53,485 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.etranzact.vasgate.electricity.ElectricityApplication]: ElectricityApplication does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-12-18 16:25:53,539 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.etranzact.vasgate.electricity.ElectricityApplication for test class com.etranzact.vasgate.electricity.ElectricityApplication
+2024-12-18 16:25:53,750 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-12-18 16:25:54,061 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://172.17.10.83:8888
+2024-12-18 16:25:54,415 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Located environment: name=vasgate_electricity_service, profiles=[dev], label=development, version=cb97dc071fd0b280d60520f8d16d5ff794834473, state=null
+2024-12-18 16:25:54,416 INFO o.s.c.b.c.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-http://172.16.12.3:80/core-systems/config-test.git/vasgate_electricity_service-dev.yml'}]
+2024-12-18 16:25:54,420 WARN o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer [main] 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ugochukwuomeje/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+	jar:file:/Users/ugochukwuomeje/.m2/repository/org/json/json/20230227/json-20230227.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2024-12-18 16:25:54,423 INFO c.e.v.e.ElectricityApplication [main] The following 2 profiles are active: "live", "dev"
+2024-12-18 16:25:54,436 INFO c.e.v.e.ElectricityApplication [main] Started ElectricityApplication in 0.826 seconds (process running for 1.537)

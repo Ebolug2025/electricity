@@ -1,0 +1,332 @@
+2024-06-07 14:59:45,961 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-07 14:59:48,018 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://172.17.10.83:8888
+2024-06-07 14:59:48,689 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Located environment: name=vasgate_electricity_service, profiles=[dev], label=development, version=0a97678cafe2a2549fd9d8055ca02f4b6e11d9a7, state=null
+2024-06-07 14:59:48,691 INFO o.s.c.b.c.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-http://172.16.12.3:80/core-systems/config-test.git/vasgate_electricity_service-dev.yml'}]
+2024-06-07 14:59:48,721 INFO c.e.v.e.ElectricityApplication [main] The following 2 profiles are active: "live", "dev"
+2024-06-07 14:59:50,729 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-07 14:59:50,729 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07 14:59:51,095 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 340 ms. Found 2 JPA repository interfaces.
+2024-06-07 14:59:51,098 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-07 14:59:51,099 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07 14:59:51,119 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 19 ms. Found 1 JPA repository interface.
+2024-06-07 14:59:52,053 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-07 14:59:52,057 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-07 14:59:52,119 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 14:59:52,120 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 14:59:52,120 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 14:59:52,123 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 14:59:52,124 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 41 ms. Found 0 Redis repository interfaces.
+2024-06-07 14:59:53,008 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=d5c35397-6f56-3c11-adde-72fc377643d7
+2024-06-07 14:59:53,833 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-07 14:59:53,841 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,848 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,872 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,879 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,884 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$781/0x000001f8da557dc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,889 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,901 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,918 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,922 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,926 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,950 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,977 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,984 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,986 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,993 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:53,996 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 14:59:55,140 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8686 (http)
+2024-06-07 14:59:55,214 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8686"]
+2024-06-07 14:59:55,220 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2024-06-07 14:59:55,221 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-06-07 14:59:55,529 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-07 14:59:55,532 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 6773 ms
+2024-06-07 14:59:56,345 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: entity]
+2024-06-07 14:59:56,570 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-06-07 14:59:56,713 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-07 14:59:57,547 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07 14:59:57,641 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-07 14:59:58,880 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5a079446
+2024-06-07 14:59:58,883 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-07 15:00:01,632 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07 15:00:01,642 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'entity'
+2024-06-07 15:00:01,667 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: entity]
+2024-06-07 15:00:01,679 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-07 15:00:01,752 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07 15:00:01,755 INFO c.z.h.HikariDataSource [main] HikariPool-2 - Starting...
+2024-06-07 15:00:02,643 INFO c.z.h.p.HikariPool [main] HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2cc3b0a7
+2024-06-07 15:00:02,643 INFO c.z.h.HikariDataSource [main] HikariPool-2 - Start completed.
+2024-06-07 15:00:02,911 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07 15:00:02,912 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'entity'
+2024-06-07 15:00:03,697 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-07 15:00:04,874 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-07 15:00:09,403 WARN o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-07 15:00:09,443 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-06-07 15:00:09,613 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8686"]
+2024-06-07 15:00:09,678 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8686 (http) with context path ''
+2024-06-07 15:00:09,685 INFO o.s.c.c.s.ConsulServiceRegistry [main] Registering service with consul: NewService{id='electricity-8686', name='electricity', tags=[], address='10.0.2.31', meta={secure=false}, port=8686, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://10.0.2.31:8686/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2024-06-07 15:00:10,596 INFO c.e.v.e.ElectricityApplication [main] Started ElectricityApplication in 26.315 seconds (process running for 28.501)
+2024-06-07 15:01:34,044 INFO o.a.c.c.C.[.[.[/] [http-nio-8686-exec-3] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-07 15:01:34,045 INFO o.s.w.s.DispatcherServlet [http-nio-8686-exec-3] Initializing Servlet 'dispatcherServlet'
+2024-06-07 15:01:34,048 INFO o.s.w.s.DispatcherServlet [http-nio-8686-exec-3] Completed initialization in 2 ms
+2024-06-07 15:01:34,304 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-3] :::::::::::::::::::::::Electricity request{"reference":"02USDWn4YRFyAewP101p024hoq","type":"1","channel":"02","amount":1000.0,"payerId":"12345678910","mobile":"08101835655","merchant":"73QABZ-TG5","name":"Fake Name","bank":"214","client":"USSD"}
+2024-06-07 15:02:36,223 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-6] :::::::::::::::::::::::Electricity request{"reference":"02USDWn4YRFyAewP101p064hoq","type":"1","channel":"02","amount":1000.0,"payerId":"12345678910","mobile":"08101835655","merchant":"73QABZ-TG5","name":"Fake Name","bank":"214","client":"USSD"}
+2024-06-07 15:02:36,610 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] >>>>>>>>>>>>>>>>>>>>>>>>> INSIDE doPrepaidTransactionPosting:::::{"reference":"02USDWn4YRFyAewP101p064hoq","paymentChannel":"phcnikj","amount":1000.0,"payerId":"12345678910","mobile":"08101835655","type":"1","channel":"02","name":"Fake Name"}
+2024-06-07 15:02:36,611 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] .............. orderId :::::02USDWn4YRFyAewP101p064hoq
+2024-06-07 15:02:36,612 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] ::::::::THIS IS THE MOBILE NUM USE:::::::08101835655
+2024-06-07 15:02:36,612 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] :::::mobile number:::::: 08101835655
+2024-06-07 15:02:36,613 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-6] ............................INSIDE IKEDC vendMeter for notification................................. 
+2024-06-07 15:02:36,614 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-6] ................ IKEDC vendMeter for notification url :::: https://idev.buypower.ng/v2/vend?strict=1
+2024-06-07 15:02:36,615 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-6] ................ IKEDC vendMeter for notification request :::: {"orderId":"02USDWn4YRFyAewP101p064hoq","vendType":"PREPAID","amount":"1000.0","phone":"08101835655","meter":"12345678910","disco":"IKEJA","vertical":"ELECTRICITY","paymentType":"B2B"}
+2024-06-07 15:02:39,806 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-6] ::::::::::::::::::::::::Response Code for IKEDC payment notification ::: 200
+2024-06-07 15:02:39,807 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-6] ::::::::::::::::::::::Response from BUYPOWER for IKEDC vendMeter for notification >>>> 200~{"status":true,"message":"Successful transaction","responseCode":200,"data":{"id":7367811,"amountGenerated":250,"tariff":null,"debtAmount":0,"debtRemaining":0,"disco":"IKEJA","orderId":"02USDWn4YRFyAewP101p064hoq","receiptNo":1717768974752,"tax":750,"vendTime":"2024-06-07 15:02:54","token":"0000-0000-0000-0000-0000","totalAmountPaid":1000,"units":"12.8","vendAmount":0,"vendRef":1717768974752,"responseCode":100,"responseMessage":"Payment successful","address":"012 Fake Cresent, Fake City, Fake State","name":"Ciroma Chukwuma Adekunle","phoneNo":"08000000000","charges":0,"tariffIndex":null,"parcels":[{"type":"TOKEN","content":"00000000000000000000"},{"type":"KCT1","content":"00000000000000000000"},{"type":"KCT2","content":"00000000000000000000"},{"type":"BONUS","content":"00000000000000000000"}],"demandCategory":"MD","assetProvider":"BENIN"}}
+2024-06-07 15:02:39,808 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-6] :::::::::::::::::::closing the conn
+2024-06-07 15:02:39,808 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] :::::::::::::::::::::::::::::the   prepaid payment notification was successfull
+2024-06-07 15:02:39,814 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] *****************Parcel is available*******************
+2024-06-07 15:02:39,817 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-6] ... Leaving doPrePaidTransactionPosting Method ...
+2024-06-07 15:02:39,826 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-6] :::::::::::::::::::::::Electricity process response {"requestType":"Payment","disco":"IKJ","accountType":"PREPAID","uniqueTransId":"02USDWn4YRFyAewP101p064hoq","accountNumber":"12345678910","mainToken":{"unit":"12.8","amount":"1000","vat":"750","token":"0000-0000-0000-0000-0000,KCT1: 00000000000000000000,KCT2: 00000000000000000000,BONUS: 00000000000000000000,","fixedCharge":" "},"externalReference":"1717768974752","responseCode":"00","errorCode":"00","unitsPurchased":"12.8","fault":"12345678910,0000-0000-0000-0000-0000,12.8,null,750,0","customerArrears":"0"}
+2024-06-07 15:03:23,013 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-8] :::::::::::::::::::::::Electricity request{"reference":"02USDWn4YRFyAewP101p064hoq","type":"2","channel":"02","amount":1000.0,"payerId":"12345678910","mobile":"08101835655","merchant":"73QABZ-TG5","name":"Fake Name","bank":"214","client":"USSD"}
+2024-06-07 15:03:31,352 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-5] :::::::::::::::::::::::Electricity request{"reference":"02USDWn4YRFyAewP101p065hoq","type":"2","channel":"02","amount":1000.0,"payerId":"12345678910","mobile":"08101835655","merchant":"73QABZ-TG5","name":"Fake Name","bank":"214","client":"USSD"}
+2024-06-07 15:03:31,719 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-5] >>>>>>>>>>>>>>>>>>>>>>>>>>>>> INSIDE POSTPAID TRANSACTION POSTING REQUEST:::::{"reference":"02USDWn4YRFyAewP101p065hoq","paymentChannel":"phcnikj","amount":1000.0,"payerId":"12345678910","mobile":"08101835655","type":"2","channel":"02","name":"Fake Name"}
+2024-06-07 15:03:31,720 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-5] .............. orderId :::::02USDWn4YRFyAewP101p065hoq
+2024-06-07 15:03:31,720 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-5] :::::mobile number:::::: 08101835655
+2024-06-07 15:03:31,720 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-5] ............................INSIDE IKEDC vendMeter for notification................................. 
+2024-06-07 15:03:31,720 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-5] ................ IKEDC vendMeter for notification url :::: https://idev.buypower.ng/v2/vend?strict=1
+2024-06-07 15:03:31,721 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-5] ................ IKEDC vendMeter for notification request :::: {"orderId":"02USDWn4YRFyAewP101p065hoq","vendType":"POSTPAID","amount":"1000.0","phone":"08101835655","meter":"12345678910","disco":"IKEJA","vertical":"ELECTRICITY","paymentType":"B2B"}
+2024-06-07 15:03:34,162 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-5] ::::::::::::::::::::::::Response Code for IKEDC payment notification ::: 200
+2024-06-07 15:03:34,163 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-5] ::::::::::::::::::::::Response from BUYPOWER for IKEDC vendMeter for notification >>>> 200~{"status":true,"message":"Successful transaction","responseCode":200,"data":{"id":7367812,"amountGenerated":250,"tariff":null,"debtAmount":0,"debtRemaining":0,"disco":"IKEJA","orderId":"02USDWn4YRFyAewP101p065hoq","receiptNo":1717769029251,"tax":750,"vendTime":"2024-06-07 15:03:49","token":"0000-0000-0000-0000-0000","totalAmountPaid":1000,"units":"12.8","vendAmount":0,"vendRef":1717769029251,"responseCode":100,"responseMessage":"Payment successful","address":"012 Fake Cresent, Fake City, Fake State","name":"Ciroma Chukwuma Adekunle","phoneNo":"08000000000","charges":0,"tariffIndex":null,"parcels":[{"type":"TOKEN","content":"00000000000000000000"},{"type":"KCT1","content":"00000000000000000000"},{"type":"KCT2","content":"00000000000000000000"},{"type":"BONUS","content":"00000000000000000000"}],"demandCategory":"NMD","assetProvider":"BENIN"}}
+2024-06-07 15:03:34,163 INFO c.e.v.e.i.u.PaymentNotification [http-nio-8686-exec-5] :::::::::::::::::::closing the conn
+2024-06-07 15:03:34,163 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-5] :::::::::::::::::::::::::::::the   postpaid payment notification was successfull
+2024-06-07 15:03:34,166 INFO c.e.v.e.i.s.Ikedcprocessor [http-nio-8686-exec-5] ... Leaving doPostPaidTransactionPosting Method ...
+2024-06-07 15:03:34,172 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-5] :::::::::::::::::::::::Electricity process response {"requestType":"Payment","disco":"IKJ","accountType":"POSTPAID","uniqueTransId":"02USDWn4YRFyAewP101p065hoq","accountNumber":"12345678910","mainToken":{"amount":"0","vat":"750","fixedCharge":" "},"externalReference":"1717769029251","responseCode":"00","errorCode":"00","unitsPurchased":"12.8","responseDesc":"success","businessUnit":"","customerArrears":"0"}
+2024-06-07 15:05:23,694 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-9] :::::::::::::::::::::::Electricity request{"reference":"02USDWn4YRFyAewP101p065hoq","type":"2","channel":"02","amount":1000.0,"payerId":"534292037501","mobile":"08101835655","merchant":"73QABZ-TG5","name":"Fake Name","bank":"214","client":"USSD"}
+2024-06-07 15:05:32,612 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-4] :::::::::::::::::::::::Electricity request{"reference":"02USDWn4YRFyAewP101p066hoq","type":"2","channel":"02","amount":1000.0,"payerId":"534292037501","mobile":"08101835655","merchant":"73QABZ-TG5","name":"Fake Name","bank":"214","client":"USSD"}
+2024-06-07 15:05:32,944 INFO c.e.v.e.e.s.EedcProcessor [http-nio-8686-exec-4] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> the postpaid transaction request sent is: {"reference":"02USDWn4YRFyAewP101p066hoq","paymentChannel":"phcnenu","amount":1000.0,"payerId":"534292037501","mobile":"08101835655","type":"2","channel":"02","name":"Fake Name"}
+2024-06-07 15:05:33,391 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-4] :::::::::::::::::::::::Electricity process response {"responseCode":"400","responseDesc":"DISCTRICT NOT FOUND"}
+2024-06-07 15:06:07,993 INFO o.s.c.c.s.ConsulServiceRegistry [SpringApplicationShutdownHook] Deregistering service with consul: electricity-8686
+2024-06-07 15:06:08,263 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'entity'
+2024-06-07 15:06:08,266 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'entity'
+2024-06-07 15:06:08,267 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2024-06-07 15:06:08,387 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2024-06-07 15:06:08,390 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown initiated...
+2024-06-07 15:06:08,415 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-2 - Shutdown completed.
+2024-06-07 15:58:40,251 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2024-06-07 15:58:42,832 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://172.17.10.83:8888
+2024-06-07 15:58:43,473 INFO o.s.c.c.c.ConfigServicePropertySourceLocator [main] Located environment: name=vasgate_electricity_service, profiles=[dev], label=development, version=0a97678cafe2a2549fd9d8055ca02f4b6e11d9a7, state=null
+2024-06-07 15:58:43,476 INFO o.s.c.b.c.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-http://172.16.12.3:80/core-systems/config-test.git/vasgate_electricity_service-dev.yml'}]
+2024-06-07 15:58:43,507 INFO c.e.v.e.ElectricityApplication [main] The following 2 profiles are active: "live", "dev"
+2024-06-07 15:58:45,741 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-07 15:58:45,741 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07 15:58:46,269 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 505 ms. Found 2 JPA repository interfaces.
+2024-06-07 15:58:46,273 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-07 15:58:46,274 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-07 15:58:46,292 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2024-06-07 15:58:47,318 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-06-07 15:58:47,322 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-06-07 15:58:47,394 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 15:58:47,395 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 15:58:47,396 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 15:58:47,400 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-06-07 15:58:47,401 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+2024-06-07 15:58:48,383 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=d5c35397-6f56-3c11-adde-72fc377643d7
+2024-06-07 15:58:49,394 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-06-07 15:58:49,405 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,413 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,450 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,456 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,460 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$781/0x0000020d42567dc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,467 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,483 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,501 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,509 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,514 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,533 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,555 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,560 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,563 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,570 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:49,573 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-06-07 15:58:50,645 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8686 (http)
+2024-06-07 15:58:50,683 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8686"]
+2024-06-07 15:58:50,689 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2024-06-07 15:58:50,691 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-06-07 15:58:50,986 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2024-06-07 15:58:50,989 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 7442 ms
+2024-06-07 15:58:52,095 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: entity]
+2024-06-07 15:58:52,371 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-06-07 15:58:52,526 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-07 15:58:53,561 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07 15:58:53,680 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2024-06-07 15:58:55,291 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5192b301
+2024-06-07 15:58:55,295 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2024-06-07 15:58:58,271 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07 15:58:58,279 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'entity'
+2024-06-07 15:58:58,313 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: entity]
+2024-06-07 15:58:58,325 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2024-06-07 15:58:58,399 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-07 15:58:58,403 INFO c.z.h.HikariDataSource [main] HikariPool-2 - Starting...
+2024-06-07 15:58:58,942 INFO c.z.h.p.HikariPool [main] HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f5378cd
+2024-06-07 15:58:58,943 INFO c.z.h.HikariDataSource [main] HikariPool-2 - Start completed.
+2024-06-07 15:58:59,286 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-07 15:58:59,287 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'entity'
+2024-06-07 15:59:00,303 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-06-07 15:59:01,766 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-07 15:59:06,479 WARN o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-06-07 15:59:06,498 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-06-07 15:59:06,716 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8686"]
+2024-06-07 15:59:06,827 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8686 (http) with context path ''
+2024-06-07 15:59:06,836 INFO o.s.c.c.s.ConsulServiceRegistry [main] Registering service with consul: NewService{id='electricity-8686', name='electricity', tags=[], address='10.0.2.31', meta={secure=false}, port=8686, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://10.0.2.31:8686/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2024-06-07 15:59:07,721 INFO c.e.v.e.ElectricityApplication [main] Started ElectricityApplication in 29.468 seconds (process running for 31.716)
+2024-06-07 17:58:48,234 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h57m22s773ms491µs500ns).
+2024-06-07 17:58:51,853 WARN c.z.h.p.HikariPool [HikariPool-2 housekeeper] HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1h57m22s762ms552µs700ns).
+2024-06-07 17:58:56,170 ERROR o.s.c.c.d.ConsulCatalogWatch [catalogWatchTaskScheduler-1] Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:83)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:36)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:139)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:143)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:400)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:130)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:70)
+	... 12 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 24 common frames omitted
+2024-06-07 17:59:07,194 ERROR o.s.c.c.d.ConsulCatalogWatch [catalogWatchTaskScheduler-1] Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:83)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:36)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:139)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:143)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:400)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:130)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:70)
+	... 12 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 24 common frames omitted
+2024-06-07 17:59:18,208 ERROR o.s.c.c.d.ConsulCatalogWatch [catalogWatchTaskScheduler-1] Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:83)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:36)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:139)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:143)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:400)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:130)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:70)
+	... 12 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 24 common frames omitted
+2024-06-07 17:59:29,234 ERROR o.s.c.c.d.ConsulCatalogWatch [catalogWatchTaskScheduler-1] Error watching Consul CatalogServices
+com.ecwid.consul.transport.TransportException: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:83)
+	at com.ecwid.consul.transport.AbstractHttpTransport.makeGetRequest(AbstractHttpTransport.java:36)
+	at com.ecwid.consul.v1.ConsulRawClient.makeGetRequest(ConsulRawClient.java:139)
+	at com.ecwid.consul.v1.catalog.CatalogConsulClient.getCatalogServices(CatalogConsulClient.java:143)
+	at com.ecwid.consul.v1.ConsulClient.getCatalogServices(ConsulClient.java:400)
+	at org.springframework.cloud.consul.discovery.ConsulCatalogWatch.catalogServicesWatch(ConsulCatalogWatch.java:130)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.apache.http.conn.ConnectTimeoutException: Connect to 172.17.10.76:8500 [/172.17.10.76] failed: Connect timed out
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:72)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:221)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:165)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:140)
+	at com.ecwid.consul.transport.AbstractHttpTransport.executeRequest(AbstractHttpTransport.java:70)
+	... 12 common frames omitted
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:551)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:602)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 24 common frames omitted
