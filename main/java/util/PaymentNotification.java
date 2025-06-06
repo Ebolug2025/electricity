@@ -5,10 +5,10 @@
  */
 package util;
 
-import com.etranzact.vasgate.electricity.ikedc.dto.request.PaymentReqDto;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.PaymentResData;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.PaymentResDto;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.PaymentResErrorDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.request.PaymentReqDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.PaymentResData;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.PaymentResDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.PaymentResErrorDto;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import java.io.BufferedReader;

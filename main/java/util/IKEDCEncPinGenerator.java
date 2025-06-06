@@ -5,8 +5,8 @@
  */
 package util;
 
-import com.etranzact.vasgate.electricity.ikedc.dto.request.EncPinReqDto;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.EncPinResDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.request.EncPinReqDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.EncPinResDto;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 

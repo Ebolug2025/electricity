@@ -1,4 +1,4 @@
-package com.etranzact.vasgate.electricity.ikedc;
+package com.lemonpay.lemonpayvas.electricity.ikedc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

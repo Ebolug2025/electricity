@@ -1,4 +1,4 @@
-package com.etranzact.vasgate.electricity.redisutility.redisservice;
+package com.lemonpay.lemonpayvas.electricity.redisutility.redisservice;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;

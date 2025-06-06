@@ -5,9 +5,9 @@
  */
 package util;
 
-import com.etranzact.vasgate.electricity.ikedc.dto.response.PaymentResData;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.ReQueryResponseDto;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.ValidationResDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.PaymentResData;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.ReQueryResponseDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.ValidationResDto;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 //import lombok.extern.slf4j.Slf4j;

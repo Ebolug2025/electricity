@@ -1,4 +1,4 @@
-package com.etranzact.vasgate.electricity.ikedc.dto.response;
+package com.lemonpay.lemonpayvas.electricity.ikedc.dto.response;
 
 public class VendFailed {
 

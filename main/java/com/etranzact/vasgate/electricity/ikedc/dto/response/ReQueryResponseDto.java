@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.etranzact.vasgate.electricity.ikedc.dto.response;
+package com.lemonpay.lemonpayvas.electricity.ikedc.dto.response;
 
 /**
  *

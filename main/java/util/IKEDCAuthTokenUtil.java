@@ -5,8 +5,8 @@
  */
 package util;
 
-import com.etranzact.vasgate.electricity.ikedc.dto.request.AuthRequestDto;
-import com.etranzact.vasgate.electricity.ikedc.dto.response.AuthResDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.request.AuthRequestDto;
+import com.lemonpay.lemonpayvas.electricity.ikedc.dto.response.AuthResDto;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import java.io.BufferedReader;

@@ -8,11 +8,11 @@
         <version>3.2.2</version>
         <relativePath/>
     </parent>
-    <groupId>com.etranzact.vasgate</groupId>
-    <artifactId>vasgate-electricity</artifactId>
+    <groupId>com.lemonpay.lemonpayvas</groupId>
+    <artifactId>lemonpay-electricity</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>electricity</name>
-    <description>vas-gate electricity service</description>
+    <description>lemonpay electricity service</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2023.0.0</spring-cloud.version>
@@ -64,6 +64,11 @@
             <artifactId>spring-cloud-starter-consul-discovery</artifactId>
         </dependency>
         <dependency>
+            <groupId>com.lemonpay.lemonpayvas</groupId>
+            <artifactId>lemonpay-phcnnode</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
@@ -77,36 +82,6 @@
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>4.4.3</version>
-        </dependency>
-        <dependency>
-            <groupId>com.etz.electricity</groupId>
-            <artifactId>phcnnode</artifactId>
-            <version>1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.etranzact.vasgate</groupId>
-            <artifactId>ikedc</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.etranzact.vasgate</groupId>
-            <artifactId>kedc</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.etranzact.vasgate</groupId>
-            <artifactId>EKOEDC</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.etranzact.vasgate</groupId>
-            <artifactId>eedc</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.etranzact.vasgate</groupId>
-            <artifactId>jedc</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
     </dependencies>

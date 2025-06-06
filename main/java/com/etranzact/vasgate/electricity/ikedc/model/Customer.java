@@ -1,4 +1,4 @@
-package com.etranzact.vasgate.electricity.ikedc.model;
+package com.lemonpay.lemonpayvas.electricity.ikedc.model;
 
 public class Customer {
     private String account;

@@ -8,10 +8,10 @@
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.etranzact.electricity</groupId>
-	<artifactId>newvasgateredis</artifactId>
+	<groupId>com.lemonpay.lemonpayvas</groupId>
+	<artifactId>newlemonpayredis</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>newvasgateredis</name>
+	<name>lemonpayredis</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>

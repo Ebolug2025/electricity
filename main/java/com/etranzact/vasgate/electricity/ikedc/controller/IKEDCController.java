@@ -1,10 +1,10 @@
-package com.etranzact.vasgate.electricity.ikedc.controller;
+package com.lemonpay.lemonpayvas.electricity.ikedc.controller;
 
-import com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityProcessRequest;
-import com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityProcessResponse;
-import com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryRequest;
-import com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse;
-import com.etranzact.vasgate.electricity.ikedc.core.IKEDCProcessor;
+import com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityProcessRequest;
+import com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityProcessResponse;
+import com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryRequest;
+import com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse;
+import com.lemonpay.lemonpayvas.electricity.ikedc.core.IKEDCProcessor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

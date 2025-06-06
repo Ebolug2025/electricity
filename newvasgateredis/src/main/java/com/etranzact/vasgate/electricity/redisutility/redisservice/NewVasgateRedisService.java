@@ -1,4 +1,4 @@
-package com.etranzact.vasgate.electricity.redisutility.redisservice;
+package com.lemonpay.lemonpayvas.electricity.redisutility.redisservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

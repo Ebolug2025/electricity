@@ -41,7 +41,7 @@
     </root>
 
     <!-- LOG "com.baeldung*" at TRACE level -->
-    <logger name="com.etranzact.vasgate" level="info" additivity="false">
+    <logger name="com.lemonpay.lemonpayvas" level="info" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>

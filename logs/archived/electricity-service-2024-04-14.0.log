@@ -9,10 +9,10 @@
 2024-04-14 21:09:59,999 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
 2024-04-14 21:10:01,638 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 21:10:01,641 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 21:10:01,704 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 21:10:01,706 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 21:10:01,706 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 21:10:01,709 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:10:01,704 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:10:01,706 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:10:01,706 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:10:01,709 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 21:10:01,709 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 48 ms. Found 0 Redis repository interfaces.
 2024-04-14 21:10:02,642 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=4fb24d40-721a-3638-aeeb-e912446dd3dc
 2024-04-14 21:10:05,968 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -89,7 +89,7 @@ org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
 Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'EKOEDCService': Unsatisfied dependency expressed through field 'redisService': Error creating bean with name 'redisService': Unsatisfied dependency expressed through field 'redisTemplate': Error creating bean with name 'redisUtility': Injection of autowired dependencies failed
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:787)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:767)
@@ -172,10 +172,10 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'RE
 2024-04-14 21:14:49,312 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 24 ms. Found 1 JPA repository interface.
 2024-04-14 21:14:50,213 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 21:14:50,217 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 21:14:50,282 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 21:14:50,283 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 21:14:50,284 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 21:14:50,287 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:14:50,282 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:14:50,283 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:14:50,284 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 21:14:50,287 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 21:14:50,287 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 49 ms. Found 0 Redis repository interfaces.
 2024-04-14 21:14:51,286 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=4fb24d40-721a-3638-aeeb-e912446dd3dc
 2024-04-14 21:14:52,367 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -239,8 +239,8 @@ org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1237)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:54)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:54)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -305,9 +305,9 @@ org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named '
 2024-04-14 21:20:33,760 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 21:20:33,837 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 29404 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 21:20:33,839 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 21:20:34,209 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 21:20:34,209 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 21:20:34,562 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -321,8 +321,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisService' for bean class [com.etranzact.vasgate.electricity.eedc.util.RedisService] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisService]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisService' for bean class [com.lemonpay.lemonpayvas.electricity.eedc.util.RedisService] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisService]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -334,9 +334,9 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 21:21:36,783 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 21:21:36,866 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 32788 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 21:21:36,868 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 21:21:37,270 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 21:21:37,270 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 21:21:37,642 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -350,8 +350,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisService' for bean class [com.etranzact.vasgate.electricity.eedc.util.RedisService] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisService]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisService' for bean class [com.lemonpay.lemonpayvas.electricity.eedc.util.RedisService] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisService]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -363,9 +363,9 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 21:23:46,523 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 21:23:46,636 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 31860 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 21:23:46,638 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 21:23:47,194 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 21:23:47,194 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 21:23:47,682 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -379,8 +379,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.etranzact.vasgate.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisUtility]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.lemonpay.lemonpayvas.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisUtility]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -446,9 +446,9 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 2024-04-14 21:31:27,228 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 21:31:27,331 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 22900 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 21:31:27,333 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 21:31:27,776 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 21:31:27,776 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 21:31:28,256 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -462,8 +462,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.etranzact.vasgate.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisUtility]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.lemonpay.lemonpayvas.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisUtility]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -475,9 +475,9 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 21:40:46,034 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 21:40:46,133 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 33808 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 21:40:46,135 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 21:40:46,644 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 21:40:46,644 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 21:40:47,052 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -491,8 +491,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.utils.RedisUtility]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.utils.RedisUtility]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -504,9 +504,9 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 22:05:14,237 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 22:05:14,335 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 688 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 22:05:14,337 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 22:05:14,783 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 22:05:14,783 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 22:05:15,179 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -520,8 +520,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.utils.RedisUtility]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.utils.RedisUtility]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -533,9 +533,9 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 22:07:50,568 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 22:07:50,660 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 34508 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 22:07:50,661 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 22:07:51,108 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 22:07:51,108 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 22:07:51,603 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -549,8 +549,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.etranzact.vasgate.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisUtility]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.lemonpay.lemonpayvas.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisUtility]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -562,9 +562,9 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 22:11:48,541 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
 2024-04-14 22:11:48,619 INFO c.e.v.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.10 with PID 25812 (C:\Projects\vasgate_electricity_service\target\classes started by linda.agbaka in C:\Projects\vasgate_electricity_service)
 2024-04-14 22:11:48,621 INFO c.e.v.e.ElectricityApplication [main] The following 1 profile is active: "live"
-2024-04-14 22:11:49,007 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+2024-04-14 22:11:49,007 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 2024-04-14 22:11:49,425 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.etranzact.vasgate.electricity.ElectricityApplication]
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.lemonpay.lemonpayvas.electricity.ElectricityApplication]
 	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:179)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:416)
 	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:289)
@@ -578,8 +578,8 @@ org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse 
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at com.etranzact.vasgate.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
-Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.etranzact.vasgate.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.etranzact.vasgate.electricity.ekoedc.Utils.RedisUtility]
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionException: Annotation-specified bean name 'redisUtility' for bean class [com.lemonpay.lemonpayvas.electricity.eedc.util.RedisUtility] conflicts with existing, non-compatible bean definition of same name and class [com.lemonpay.lemonpayvas.electricity.ekoedc.Utils.RedisUtility]
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.checkCandidate(ClassPathBeanDefinitionScanner.java:361)
 	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:288)
 	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128)
@@ -599,10 +599,10 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 22:14:30,610 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
 2024-04-14 22:14:31,333 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 22:14:31,336 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 22:14:31,408 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:14:31,409 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:14:31,410 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:14:31,413 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:14:31,408 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:14:31,409 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:14:31,410 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:14:31,413 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 22:14:31,413 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
 2024-04-14 22:14:32,269 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=2495f251-058a-3d53-941c-26920a39caf5
 2024-04-14 22:14:33,189 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -660,12 +660,12 @@ Caused by: org.springframework.context.annotation.ConflictingBeanDefinitionExcep
 2024-04-14 22:14:54,403 INFO o.s.w.s.DispatcherServlet [http-nio-8686-exec-3] Initializing Servlet 'dispatcherServlet'
 2024-04-14 22:14:54,407 INFO o.s.w.s.DispatcherServlet [http-nio-8686-exec-3] Completed initialization in 3 ms
 2024-04-14 22:14:54,716 INFO c.e.v.e.e.s.EedcProcessor [http-nio-8686-exec-3] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>the request sent for Enugu electricity: {"reference":"01NK52840B05903UZ7Z9","action":"prepaid","type":"3","type2":"02","amount":0.0,"account":"12345678910","mobile":null}
-2024-04-14 22:14:54,727 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.logger" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.logger" is null
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:507)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:14:54,727 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.logger" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.logger" is null
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:507)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -721,12 +721,12 @@ java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Obj
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:21:13,804 INFO c.e.v.e.e.s.EedcProcessor [http-nio-8686-exec-7] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>the request sent for Enugu electricity: {"reference":"01NK52840B05903UZ7Z9","action":"prepaid","type":"3","type2":"02","amount":0.0,"account":"12345678910","mobile":"08101835655"}
-2024-04-14 22:21:13,807 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.logger" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.logger" is null
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:507)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:21:13,807 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.logger" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.logger" is null
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:507)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -799,10 +799,10 @@ java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Obj
 2024-04-14 22:24:13,149 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
 2024-04-14 22:24:13,789 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 22:24:13,791 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 22:24:13,848 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:24:13,850 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:24:13,850 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:24:13,852 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:24:13,848 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:24:13,850 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:24:13,850 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:24:13,852 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 22:24:13,852 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
 2024-04-14 22:24:14,434 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=2495f251-058a-3d53-941c-26920a39caf5
 2024-04-14 22:24:15,138 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -860,12 +860,12 @@ java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Obj
 2024-04-14 22:24:48,585 INFO o.s.w.s.DispatcherServlet [http-nio-8686-exec-2] Initializing Servlet 'dispatcherServlet'
 2024-04-14 22:24:48,588 INFO o.s.w.s.DispatcherServlet [http-nio-8686-exec-2] Completed initialization in 2 ms
 2024-04-14 22:24:48,889 INFO c.e.v.e.e.s.EedcProcessor [http-nio-8686-exec-2] >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>the request sent for Enugu electricity: {"reference":"01NK52840B05903UZ7Z9","action":"prepaid","type":"3","type2":"02","amount":0.0,"account":"12345678910","mobile":"08101835655"}
-2024-04-14 22:24:48,900 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.logger" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.logger" is null
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:507)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:24:48,900 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.logger" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Object, java.lang.Throwable)" because "com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.logger" is null
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:507)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -938,10 +938,10 @@ java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Obj
 2024-04-14 22:29:19,778 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
 2024-04-14 22:29:20,640 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 22:29:20,643 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 22:29:20,713 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:29:20,715 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:29:20,716 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:29:20,719 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:29:20,713 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:29:20,715 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:29:20,716 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:29:20,719 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 22:29:20,720 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 54 ms. Found 0 Redis repository interfaces.
 2024-04-14 22:29:21,504 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=2495f251-058a-3d53-941c-26920a39caf5
 2024-04-14 22:29:22,260 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -1002,11 +1002,11 @@ java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.error(Obj
 2024-04-14 22:30:33,458 INFO c.e.v.e.e.s.EedcProcessor [http-nio-8686-exec-2] CALLING ENUGU
 2024-04-14 22:30:33,463 ERROR c.e.v.e.e.s.EedcProcessor [http-nio-8686-exec-2] Error : 
 java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.info(Object)" because "this.logger" is null
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:56)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:56)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1062,10 +1062,10 @@ java.lang.NullPointerException: Cannot invoke "org.apache.log4j.Logger.info(Obje
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:30:33,501 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-2] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 22:30:33,510 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:30:33,510 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1138,10 +1138,10 @@ java.lang.NullPointerException: Cannot invoke "String.split(String)" because the
 2024-04-14 22:34:59,282 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
 2024-04-14 22:35:00,270 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 22:35:00,278 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 22:35:00,418 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:35:00,419 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:35:00,420 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:35:00,425 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:35:00,418 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:35:00,419 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:35:00,420 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:35:00,425 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 22:35:00,426 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 104 ms. Found 0 Redis repository interfaces.
 2024-04-14 22:35:01,186 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=2495f251-058a-3d53-941c-26920a39caf5
 2024-04-14 22:35:01,963 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -1208,12 +1208,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:60)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:60)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1269,10 +1269,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:35:37,483 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-1] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 22:35:37,495 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:35:37,495 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1337,12 +1337,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:60)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:60)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1398,10 +1398,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:36:30,103 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-2] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 22:36:30,104 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:36:30,104 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1466,12 +1466,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:60)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:60)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1527,10 +1527,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:36:55,554 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-6] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 22:36:55,556 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:36:55,556 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1603,10 +1603,10 @@ java.lang.NullPointerException: Cannot invoke "String.split(String)" because the
 2024-04-14 22:46:07,514 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interface.
 2024-04-14 22:46:08,474 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 22:46:08,478 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 22:46:08,566 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:46:08,567 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:46:08,568 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:46:08,571 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:46:08,566 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:46:08,567 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:46:08,568 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:46:08,571 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 22:46:08,571 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 65 ms. Found 0 Redis repository interfaces.
 2024-04-14 22:46:09,282 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=2495f251-058a-3d53-941c-26920a39caf5
 2024-04-14 22:46:10,146 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -1673,12 +1673,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1734,10 +1734,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:47:38,411 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-2] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 22:47:38,423 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:47:38,423 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1810,10 +1810,10 @@ java.lang.NullPointerException: Cannot invoke "String.split(String)" because the
 2024-04-14 22:51:47,839 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
 2024-04-14 22:51:48,615 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 22:51:48,618 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 22:51:48,688 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:51:48,689 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:51:48,690 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 22:51:48,692 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:51:48,688 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:51:48,689 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:51:48,690 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 22:51:48,692 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 22:51:48,693 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
 2024-04-14 22:51:49,413 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=2495f251-058a-3d53-941c-26920a39caf5
 2024-04-14 22:51:50,113 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -1880,12 +1880,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1941,10 +1941,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 22:52:51,543 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-2] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 22:52:51,554 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 22:52:51,554 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2017,10 +2017,10 @@ java.lang.NullPointerException: Cannot invoke "String.split(String)" because the
 2024-04-14 23:02:51,565 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
 2024-04-14 23:02:52,470 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 23:02:52,473 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 23:02:52,540 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:02:52,541 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:02:52,541 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:02:52,544 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:02:52,540 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:02:52,541 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:02:52,541 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:02:52,544 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 23:02:52,545 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
 2024-04-14 23:02:53,221 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=7e77b635-9c90-3af8-9d7c-0ed21526265c
 2024-04-14 23:02:54,156 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -2087,12 +2087,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:63)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:63)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2148,10 +2148,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 23:03:15,818 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-2] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 23:03:15,829 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 23:03:15,829 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2216,12 +2216,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:63)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:63)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2277,10 +2277,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 23:08:26,770 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-4] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 23:08:26,772 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 23:08:26,772 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2345,12 +2345,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:63)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:63)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2406,10 +2406,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 23:08:39,386 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-6] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 23:08:39,388 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 23:08:39,388 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2482,10 +2482,10 @@ java.lang.NullPointerException: Cannot invoke "String.split(String)" because the
 2024-04-14 23:11:56,561 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
 2024-04-14 23:11:57,377 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 23:11:57,380 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 23:11:57,448 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:11:57,449 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:11:57,450 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:11:57,453 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:11:57,448 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:11:57,449 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:11:57,450 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:11:57,453 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 23:11:57,453 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 53 ms. Found 0 Redis repository interfaces.
 2024-04-14 23:11:58,103 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=7e77b635-9c90-3af8-9d7c-0ed21526265c
 2024-04-14 23:11:58,853 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -2552,12 +2552,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2613,10 +2613,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 23:13:02,995 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-1] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 23:13:03,005 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 23:13:03,005 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2689,10 +2689,10 @@ java.lang.NullPointerException: Cannot invoke "String.split(String)" because the
 2024-04-14 23:18:08,098 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
 2024-04-14 23:18:09,072 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
 2024-04-14 23:18:09,077 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2024-04-14 23:18:09,159 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:18:09,160 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:18:09,162 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-2024-04-14 23:18:09,165 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.etranzact.vasgate.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:18:09,159 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:18:09,160 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:18:09,162 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2024-04-14 23:18:09,165 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.ekoedc.respository.RedisRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
 2024-04-14 23:18:09,165 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 62 ms. Found 0 Redis repository interfaces.
 2024-04-14 23:18:09,934 INFO o.s.c.c.s.GenericScope [main] BeanFactory id=7e77b635-9c90-3af8-9d7c-0ed21526265c
 2024-04-14 23:18:10,790 WARN o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
@@ -2759,12 +2759,12 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at java.base/java.net.URL.<init>(URL.java:674)
 	at java.base/java.net.URL.<init>(URL.java:569)
 	at java.base/java.net.URL.<init>(URL.java:516)
-	at com.etranzact.vasgate.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
-	at com.etranzact.vasgate.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
-	at com.etranzact.vasgate.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HttpUtil.sendGet(HttpUtil.java:17)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.EEDCService.validateMeter(EEDCService.java:64)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.doPrepaidInfoPosting(EedcProcessor.java:413)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EedcProcessor.query(EedcProcessor.java:120)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:70)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2820,10 +2820,10 @@ java.net.MalformedURLException: no protocol: nullcustomer/detail?accountNumber=1
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:842)
 2024-04-14 23:19:55,981 INFO c.e.v.e.s.i.ElectricityProcessorServiceImpl [http-nio-8686-exec-3] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, errorCode=null, responseCode=null, responseDesc=null, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null)
-2024-04-14 23:19:55,992 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
-java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.etranzact.vasgate.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
-	at com.etranzact.vasgate.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
-	at com.etranzact.vasgate.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
+2024-04-14 23:19:55,992 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] [http-nio-8686-exec-3] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "String.split(String)" because the return value of "com.lemonpay.lemonpayvas.electricity.phcnnode.dto.ElectricityQueryResponse.getBusinessUnit()" is null
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:108)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:22)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

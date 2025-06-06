@@ -1,4 +1,4 @@
-package com.etranzact.vasgate.electricity.ikedc.dto.request;
+package com.lemonpay.lemonpayvas.electricity.ikedc.dto.request;
 
 public class VendRequestDto {
     private String orderId;
