@@ -2,9 +2,9 @@ com/lemonpay/lemonpayvas/electricity/exception/GlobalExceptionHandler.class
 com/lemonpay/lemonpayvas/electricity/controller/ElectricityController.class
 com/lemonpay/lemonpayvas/electricity/exception/ResourceNotFoundException.class
 com/lemonpay/lemonpayvas/electricity/ElectricityApplication.class
-com/lemonpay/lemonpayvas/electricity/config/UserDatasourceConfiguration.class
 com/lemonpay/lemonpayvas/electricity/dto/ErrorDetails.class
 com/lemonpay/lemonpayvas/electricity/telco/entity/TPhcnDistrictPrepaid.class
+com/lemonpay/lemonpayvas/electricity/dto/ElectricityGenericQueryRequest.class
 com/lemonpay/lemonpayvas/electricity/telco/repo/TPhcnDistrictPostpaidRepo.class
 com/lemonpay/lemonpayvas/electricity/dto/ResponseEnum.class
 com/lemonpay/lemonpayvas/electricity/telco/repo/TPhcnDistrictPrepaidRepo.class
@@ -12,7 +12,6 @@ com/lemonpay/lemonpayvas/electricity/service/ElectricityProcessorService.class
 com/lemonpay/lemonpayvas/electricity/telco/entity/TPhcnDistrictPostpaid.class
 com/lemonpay/lemonpayvas/electricity/dto/ElectricityProcessorRequest.class
 com/lemonpay/lemonpayvas/electricity/entity/VasTrans.class
-com/lemonpay/lemonpayvas/electricity/repository/TPaytransRepo.class
 com/lemonpay/lemonpayvas/electricity/dto/BaseResponse.class
 com/lemonpay/lemonpayvas/electricity/service/impl/ElectricityProcessorServiceImpl.class
-com/lemonpay/lemonpayvas/electricity/config/telcoDatasourceConfiguration.class
+com/lemonpay/lemonpayvas/electricity/repository/VasTransRepo.class

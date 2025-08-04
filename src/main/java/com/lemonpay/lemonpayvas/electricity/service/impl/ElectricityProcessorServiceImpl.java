@@ -2,14 +2,12 @@ package com.lemonpay.lemonpayvas.electricity.service.impl;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.lemonpay.lemonpayvas.electricity.dto.BaseResponse;
-import com.lemonpay.lemonpayvas.electricity.dto.ElectricityProcessorRequest;
-import com.lemonpay.lemonpayvas.electricity.dto.ResponseEnum;
+import com.lemonpay.lemonpayvas.electricity.dto.*;
 import com.lemonpay.lemonpayvas.electricity.entity.VasTrans;
 import com.lemonpay.lemonpayvas.electricity.exception.ResourceNotFoundException;
 import com.lemonpay.lemonpayvas.electricity.phcnnode.PHCNNode;
 import com.lemonpay.lemonpayvas.electricity.phcnnode.dto.*;
-import com.lemonpay.lemonpayvas.electricity.repository.TPaytransRepo;
+import com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo;
 import com.lemonpay.lemonpayvas.electricity.service.ElectricityProcessorService;
 import com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo;
 import com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo;
@@ -38,17 +36,17 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
     private final TPhcnDistrictPrepaidRepo prepaidRepo;
 
 
-    private final TPaytransRepo tPaytransRepo;
+    private final VasTransRepo vasTransRepo;
 
-    public ElectricityProcessorServiceImpl(ApplicationContext context, TPhcnDistrictPostpaidRepo postpaidRepo, TPhcnDistrictPrepaidRepo prepaidRepo, TPaytransRepo tPaytransRepo) {
+    public ElectricityProcessorServiceImpl(ApplicationContext context, TPhcnDistrictPostpaidRepo postpaidRepo, TPhcnDistrictPrepaidRepo prepaidRepo, VasTransRepo vasTransRepo) {
         this.context = context;
         this.postpaidRepo = postpaidRepo;
         this.prepaidRepo = prepaidRepo;
-        this.tPaytransRepo = tPaytransRepo;
+        this.vasTransRepo = vasTransRepo;
     }
 
     @Override
-    public ResponseEntity<BaseResponse> query(ElectricityProcessorRequest request, String alias) {
+    public ResponseEntity<BaseResponse> query(ElectricityGenericQueryRequest request, String alias) {
         System.out.println("::::::::::::::::::::::::Alias::::::::::::::::"+alias);
         // Determine which module to use based on transaction details
         PHCNNode phcnNode;
@@ -105,49 +103,49 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
 
         if(nodeResponse.getResponseCode() == "00") {
             //getMerchantCode
-            String merchantCode = null;
-            String disco;
-            if (alias.length() >= 3) {
-                disco = alias.substring(alias.length() - 3).toUpperCase();
-                System.out.println("Last three characters: " + disco);
-                log.info("Last three characters: " + disco);
-            } else {
-                disco = alias;
-                System.out.println("String is too short to get the last three characters");
-                log.info("String is too short to get the last three characters");
-            }
+//            String merchantCode = null;
+//            String disco;
+//            if (alias.length() >= 3) {
+//                disco = alias.substring(alias.length() - 3).toUpperCase();
+//                System.out.println("Last three characters: " + disco);
+//                log.info("Last three characters: " + disco);
+//            } else {
+//                disco = alias;
+//                System.out.println("String is too short to get the last three characters");
+//                log.info("String is too short to get the last three characters");
+//            }
 
-            String channelName = "";
-            if (!request.getChannel().equals("01") && !request.getChannel().equals("09")) {
-                if (request.getChannel().equals("02")) {
-                    if (request.getReference().contains("02USD")) {
-                        channelName = "USSD";
-                    } else if (request.getReference().startsWith("02POS")) {
-                        channelName = "POS";
-                    } else {
-                        channelName = "MOBILE";
-                    }
-                } else if (request.getChannel().equals("03")) {
-                    channelName = "POS";
-                } else if (request.getChannel().equals("11")) {
-                    channelName = "USSD";
-                } else if (request.getChannel().equals("05")) {
-                    channelName = "PAYOUTLET";
-                }
-            } else {
-                channelName = "WEB";
-            }
-
-            if (request.getType().equals("1")) {
-                String busUnit = null;
-
-                if (nodeResponse.getBusinessUnit().toLowerCase().contains("region")) {
-                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().toLowerCase().indexOf("region")).trim().replaceAll(" ", "-");
-                } else {
-                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().indexOf(" "));
-                }
-
-                log.info("==========================getting merchant code with the parameters: "+disco+" "+busUnit);
+//            String channelName = "";
+//            if (!request.getChannel().equals("01") && !request.getChannel().equals("09")) {
+//                if (request.getChannel().equals("02")) {
+//                    if (request.getReference().contains("02USD")) {
+//                        channelName = "USSD";
+//                    } else if (request.getReference().startsWith("02POS")) {
+//                        channelName = "POS";
+//                    } else {
+//                        channelName = "MOBILE";
+//                    }
+//                } else if (request.getChannel().equals("03")) {
+//                    channelName = "POS";
+//                } else if (request.getChannel().equals("11")) {
+//                    channelName = "USSD";
+//                } else if (request.getChannel().equals("05")) {
+//                    channelName = "PAYOUTLET";
+//                }
+//            } else {
+//                channelName = "WEB";
+//            }
+//
+//            if (request.getType().equals("1")) {
+//                String busUnit = null;
+//
+//                if (nodeResponse.getBusinessUnit().toLowerCase().contains("region")) {
+//                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().toLowerCase().indexOf("region")).trim().replaceAll(" ", "-");
+//                } else {
+//                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().indexOf(" "));
+//                }
+//
+//                log.info("==========================getting merchant code with the parameters: "+disco+" "+busUnit);
                 //Map<String, Object> prepaid = prepaidRepo.getMerchantCode(disco, busUnit.trim()+"%");
 //                if (channelName.equals("WEB")) {
 //                    merchantCode = (String) prepaid.get("WEB_MERCHANT_CODE");
@@ -161,33 +159,33 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
 //                    merchantCode = (String) prepaid.get("MOBILE_MERCHANT_CODE");
 //                }
 
-                log.info("=========================== the returned merchantcode is: "+merchantCode);
-            } else if (request.getType().equals("2")) {
-                String busUnit = null;
-
-                if (nodeResponse.getBusinessUnit().toLowerCase().contains("region")) {
-                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().toLowerCase().indexOf("region")).trim().replaceAll(" ", "-");
-                } else {
-                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().indexOf(" "));
-                }
-
-                log.info("==========================getting merchant code with the parameters: "+disco+" "+busUnit+" channel "+channelName);
-                Map<String, Object> postpaid = postpaidRepo.getMerchantCode(disco, busUnit.trim()+"%");
-               // log.info("========================== fetched merchant codes is: "+postpaid);
-                if (channelName.equals("WEB")) {
-                    merchantCode = (String) postpaid.get("WEB_MERCHANT_CODE");
-                } else if (channelName.equals("POS")) {
-                    merchantCode = (String) postpaid.get("POS_MERCHANT_CODE");
-                } else if (channelName.equals("PAYOUTLET")) {
-                    merchantCode = (String) postpaid.get("PAYOUTLET_MERCHANT_CODE");
-                } else if (channelName.equals("USSD")) {
-                    merchantCode = (String) postpaid.get("USSD_MERCHANT_CODE");
-                } else if (channelName.equals("MOBILE")) {
-                    merchantCode = (String) postpaid.get("MOBILE_MERCHANT_CODE");
-                }
-                log.info("=========================== the returned merchantcode is: "+merchantCode);
-            }
-            nodeResponse.setMerchantCode(merchantCode);
+//                log.info("=========================== the returned merchantcode is: "+merchantCode);
+//            } else if (request.getType().equals("2")) {
+//                String busUnit = null;
+//
+//                if (nodeResponse.getBusinessUnit().toLowerCase().contains("region")) {
+//                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().toLowerCase().indexOf("region")).trim().replaceAll(" ", "-");
+//                } else {
+//                    busUnit = nodeResponse.getBusinessUnit().substring(0, nodeResponse.getBusinessUnit().indexOf(" "));
+//                }
+//
+//                log.info("==========================getting merchant code with the parameters: "+disco+" "+busUnit+" channel "+channelName);
+//                Map<String, Object> postpaid = postpaidRepo.getMerchantCode(disco, busUnit.trim()+"%");
+//               // log.info("========================== fetched merchant codes is: "+postpaid);
+//                if (channelName.equals("WEB")) {
+//                    merchantCode = (String) postpaid.get("WEB_MERCHANT_CODE");
+//                } else if (channelName.equals("POS")) {
+//                    merchantCode = (String) postpaid.get("POS_MERCHANT_CODE");
+//                } else if (channelName.equals("PAYOUTLET")) {
+//                    merchantCode = (String) postpaid.get("PAYOUTLET_MERCHANT_CODE");
+//                } else if (channelName.equals("USSD")) {
+//                    merchantCode = (String) postpaid.get("USSD_MERCHANT_CODE");
+//                } else if (channelName.equals("MOBILE")) {
+//                    merchantCode = (String) postpaid.get("MOBILE_MERCHANT_CODE");
+//                }
+//                log.info("=========================== the returned merchantcode is: "+merchantCode);
+//            }
+//            nodeResponse.setMerchantCode(merchantCode);
 
             //    BaseResponse response = new BaseResponse();
             response.setMessage(ResponseEnum.SUCCESSFUL.getResponseMessage());
@@ -209,6 +207,7 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
         try {
             log.info("::::::::::::::::::::::::::::::::::::Electricity request"+objectMapper.writeValueAsString(request));
         } catch (JsonProcessingException e) {
+
             throw new RuntimeException(e);
         }
         // Determine which module to use based on transaction details
@@ -245,24 +244,8 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
             response.setMessage("Mobile is required");
             response.setStatus(ResponseEnum.BAD_REQUEST.getResponseCode());
             return ResponseEntity.ok(response);
-        } else if(request.getName().isEmpty()){
-            response.setMessage(ResponseEnum.BAD_REQUEST.getResponseMessage());
-            response.setStatus("Name is required");
-            return ResponseEntity.ok(response);
         } else if(request.getAmount() == null){
             response.setMessage("Amount is required");
-            response.setStatus(ResponseEnum.BAD_REQUEST.getResponseCode());
-            return ResponseEntity.ok(response);
-        }else if(request.getMerchant().isEmpty()){
-            response.setMessage("Merchant is required");
-            response.setStatus(ResponseEnum.BAD_REQUEST.getResponseCode());
-            return ResponseEntity.ok(response);
-        }else if(request.getBank().isEmpty()){
-            response.setMessage("Bank is required");
-            response.setStatus(ResponseEnum.BAD_REQUEST.getResponseCode());
-            return ResponseEntity.ok(response);
-        }else if(request.getClient() == null || request.getClient().isEmpty()){
-            response.setMessage("Client is required");
             response.setStatus(ResponseEnum.BAD_REQUEST.getResponseCode());
             return ResponseEntity.ok(response);
         }
@@ -280,7 +263,7 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
       //  electricityRequest.setAction(request.getAction());
 
         //check if referencealready exists
-       Optional<VasTrans> trans = tPaytransRepo.findByUniqueTransId(request.getReference());
+       Optional<VasTrans> trans = vasTransRepo.findByUniqueTransId(request.getReference());
        if(trans.isPresent()){
            response.setMessage("Duplicate Reference");
            response.setStatus("400");
@@ -290,22 +273,17 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
        }
 
         //save transaction
-        VasTrans tPaytrans = new VasTrans();
-        //tPaytrans.setMerchantId(alias);
-        tPaytrans.setMerchantCode(request.getMerchant());
-        tPaytrans.setTransDate(new Date());
-        tPaytrans.setTransType("00");
-        tPaytrans.setTransChannel(request.getChannel());
-        tPaytrans.setTransAmount(request.getAmount());
-        tPaytrans.setMobileNo(request.getMobile());
-        tPaytrans.setPaymentType(request.getType());
-        tPaytrans.setTAddress(request.getCustomerAddress());
+        VasTrans vasTrans = new VasTrans();
+        //vasTrans.setMerchantId(alias);
+//        vasTrans.setMerchantCode(request.getMerchant());
+        vasTrans.setTransDate(new Date());
+        vasTrans.setTransType("00");
+        vasTrans.setTransChannel(request.getChannel());
+        vasTrans.setTransAmount(request.getAmount());
+        vasTrans.setMobileNo(request.getMobile());
+        vasTrans.setPaymentType(request.getType());
+        vasTrans.setTAddress(request.getCustomerAddress());
 
-        String disco = alias.substring(alias.length() - 3);
-
-        //tPaytransRepo.save(tPaytrans);
-
-        //call disco depending on alias
         ElectricityProcessResponse nodeResponse = phcnNode.process(electricityRequest);
 
         try {
@@ -314,7 +292,6 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
             throw new RuntimeException(e);
         }
 
-        //update transaction
         String processStatus ;
         if(nodeResponse.getResponseCode().equals("00")){
             processStatus = "0";
@@ -328,11 +305,13 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
             processStatus = "1";
         }
 
-        tPaytrans.setUniqueTransid(request.getReference());
-        tPaytrans.setStatusDescription(nodeResponse.getResponseDesc());
-        tPaytrans.setResponseDate(new Date());
+        vasTrans.setUniqueTransid(request.getReference());
+        vasTrans.setTransNo(nodeResponse.getExternalReference());
+        vasTrans.setStatusDescription(nodeResponse.getResponseDesc());
+        vasTrans.setTransStatus(processStatus);
+        vasTrans.setResponseDate(new Date());
 
-        tPaytransRepo.save(tPaytrans);
+        vasTransRepo.save(vasTrans);
 
         //BaseResponse response = new BaseResponse();
         response.setMessage(ResponseEnum.SUCCESSFUL.getResponseMessage());
@@ -342,7 +321,7 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
     }
 
     @Override
-    public ResponseEntity<BaseResponse> reProcess(ElectricityProcessorRequest request, String alias) {
+    public ResponseEntity<BaseResponse> reProcess(ElectricityGenericRequeryRequest request, String alias) {
         System.out.println("Alias::::::::::::::::" + alias);
         BaseResponse response = new BaseResponse();
         ObjectMapper objectMapper = new ObjectMapper();
@@ -355,13 +334,13 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
       //  objectMapper
 
         //check required data is sent
-        if(request.getUniqueTransId().isEmpty()){
+        if(request.getReference().isEmpty()){
             response.setMessage(ResponseEnum.BAD_REQUEST.getResponseMessage());
             response.setStatus("UniqueTransId is required");
             return ResponseEntity.ok(response);
         }
 
-        Optional<VasTrans> optionalTPaytrans = tPaytransRepo.findByUniqueTransId(request.getUniqueTransId());
+        Optional<VasTrans> optionalTPaytrans = vasTransRepo.findByUniqueTransId(request.getReference());
 
         // Determine which module to use based on transaction details
         PHCNNode phcnNode;
@@ -385,7 +364,7 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
             VasTrans vasTrans = optionalTPaytrans.get();
 
             log.info("::::::::::::::::::::::::::::");
-            if(!(vasTrans.getProcessStatus().equals("0"))) {
+            if(!(vasTrans.getTransStatus().equals("0"))) {
 
                 //call disco depending on alias
                 ElectricityReQueryRequest electricityRequest = new ElectricityReQueryRequest();
@@ -398,7 +377,7 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
                 electricityRequest.setChannel(request.getChannel());
                 electricityRequest.setMobile(request.getMobile());
                // electricityRequest.setAction(request.getAction());
-                electricityRequest.setUniqueTransId(request.getUniqueTransId());
+                electricityRequest.setUniqueTransId(vasTrans.getTransNo());
 
                 ElectricityProcessResponse nodeResponse;
                 try{
@@ -421,11 +400,11 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
                     processStatus = "1";
                 }
                 vasTrans.setUniqueTransid(nodeResponse.getUniqueTransId());
-                vasTrans.setProcessStatus(processStatus);
+                vasTrans.setTransStatus(processStatus);
                 vasTrans.setStatusDescription(nodeResponse.getResponseDesc());
                 vasTrans.setResponseDate(new Date());
                 //vasTrans.setChequeBank(nodeResponse.getExternalReference()); //external reference
-                tPaytransRepo.save(vasTrans);
+                vasTransRepo.save(vasTrans);
                 response.setMessage(ResponseEnum.SUCCESSFUL.getResponseMessage());
                 response.setStatus(ResponseEnum.SUCCESSFUL.getResponseCode());
                 response.setData(nodeResponse);
@@ -438,12 +417,12 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
                 nodeResponse.setDisco(vasTrans.getAlias());
                 nodeResponse.setAccountNumber(vasTrans.getAccount());
                 nodeResponse.setUniqueTransId(vasTrans.getUniqueTransid());
-                nodeResponse.setResponseCode(vasTrans.getProcessStatus());
+                nodeResponse.setResponseCode(vasTrans.getTransStatus());
                 nodeResponse.setExternalReference(vasTrans.getUniqueTransid());
                 nodeResponse.setResponseDesc(vasTrans.getStatusDescription());
 
                 String processStatus ;
-                if(vasTrans.getProcessStatus().equals("0")){
+                if(vasTrans.getTransStatus().equals("0")){
                     processStatus = "00";
                 }else if(nodeResponse.getResponseCode().equals("4")){
                     processStatus = "01";

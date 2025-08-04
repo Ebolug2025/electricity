@@ -22,22 +22,13 @@ public class ElectricityProcessorRequest {
     private Double amount;
     @NotBlank(message = "payerId is required")
     private String payerId;
-//    private String action;
     @NotBlank(message = "paymentChannel is required")
-    private String paymentChannel;
-    @NotBlank(message = "mobile is required")
     private String mobile;
-    @NotBlank(message = "merchantCode is required")
     private String merchant;
-    @NotBlank(message = "name is required")
     private String name;
-    @NotBlank(message = "bank is required")
     private  String bank;
-    @NotBlank(message = "customerAddress is required")
     private String customerAddress;
-    @NotBlank(message = "uniqueTransId is required")
     private String uniqueTransId;
-    @NotBlank(message = "client is required")
     private String client;
 
 }

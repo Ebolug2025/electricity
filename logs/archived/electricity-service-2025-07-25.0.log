@@ -1,0 +1,961 @@
+2025-07-25 00:25:05,804 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-4] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 00:26:24,222 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-6] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 00:31:31,738 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:31:31,756 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 00:31:31,767 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 00:31:34,507 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 00:31:34,534 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 41893 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 00:31:34,535 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 00:31:35,006 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:31:35,006 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 00:31:35,069 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2025-07-25 00:31:35,078 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:31:35,079 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 00:31:35,086 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:31:35,086 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:31:35,086 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:31:35,086 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 00:31:35,380 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 00:31:35,383 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:31:35,384 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 00:31:35,384 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 00:31:35,404 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 00:31:35,404 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 838 ms
+2025-07-25 00:31:35,503 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 00:31:35,525 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 00:31:35,537 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 00:31:35,648 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 00:31:35,660 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 00:31:35,755 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53d9af1
+2025-07-25 00:31:35,756 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 00:31:35,791 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 00:31:36,132 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 00:31:36,178 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:31:36,272 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 00:31:36,312 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 00:31:36,312 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 00:31:36,396 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 00:31:36,678 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 00:31:36,702 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:31:36,709 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 00:31:36,719 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.356 seconds (process running for 2.677)
+2025-07-25 00:31:55,283 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 00:31:55,284 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 00:31:55,287 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 3 ms
+2025-07-25 00:31:55,367 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 00:37:07,857 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:37:07,864 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 00:37:07,904 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 00:37:09,971 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 00:37:09,992 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 44365 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 00:37:09,992 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 00:37:10,443 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:37:10,443 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 00:37:10,512 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 62 ms. Found 3 JPA repository interfaces.
+2025-07-25 00:37:10,524 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:37:10,525 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 00:37:10,532 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:37:10,532 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:37:10,532 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:37:10,532 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 00:37:10,808 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 00:37:10,812 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:37:10,812 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 00:37:10,812 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 00:37:10,832 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 00:37:10,833 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 820 ms
+2025-07-25 00:37:10,933 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 00:37:10,955 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 00:37:10,967 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 00:37:11,078 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 00:37:11,089 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 00:37:11,174 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54d35ed5
+2025-07-25 00:37:11,175 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 00:37:11,206 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 00:37:11,515 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 00:37:11,550 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:37:11,656 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 00:37:11,704 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 00:37:11,704 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 00:37:11,791 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 00:37:12,085 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 00:37:12,106 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:37:12,114 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 00:37:12,124 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.286 seconds (process running for 2.594)
+2025-07-25 00:37:20,792 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 00:37:20,792 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 00:37:20,795 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 3 ms
+2025-07-25 00:37:20,889 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 00:38:56,177 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:38:56,181 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 00:38:56,200 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 00:38:58,031 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 00:38:58,052 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 45162 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 00:38:58,053 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 00:38:58,486 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:38:58,486 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 00:38:58,558 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 69 ms. Found 3 JPA repository interfaces.
+2025-07-25 00:38:58,567 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:38:58,567 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 00:38:58,574 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:38:58,574 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:38:58,575 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:38:58,575 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 00:38:58,885 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 00:38:58,890 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:38:58,891 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 00:38:58,891 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 00:38:58,913 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 00:38:58,914 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 838 ms
+2025-07-25 00:38:59,020 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 00:38:59,041 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 00:38:59,056 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 00:38:59,159 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 00:38:59,170 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 00:38:59,228 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e66b498
+2025-07-25 00:38:59,228 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 00:38:59,254 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 00:38:59,570 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 00:38:59,596 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:38:59,693 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 00:38:59,736 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 00:38:59,736 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 00:38:59,815 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 00:39:00,095 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 00:39:00,117 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:39:00,124 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 00:39:00,135 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.245 seconds (process running for 2.514)
+2025-07-25 00:39:14,511 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 00:39:14,511 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-07-25 00:39:14,513 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Completed initialization in 2 ms
+2025-07-25 00:39:14,594 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-2] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 00:39:14,624 DEBUG o.h.SQL [http-nio-8100-exec-2] Select * From t_paytrans where UNIQUE_TRANSID = ?
+2025-07-25 00:39:14,677 WARN o.h.e.j.s.SqlExceptionHelper [http-nio-8100-exec-2] SQL Error: 1146, SQLState: 42S02
+2025-07-25 00:39:14,677 ERROR o.h.e.j.s.SqlExceptionHelper [http-nio-8100-exec-2] Table 'lemonpayvasdb.t_paytrans' doesn't exist
+2025-07-25 00:49:02,076 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:49:02,097 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 00:49:02,118 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 00:49:04,057 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 00:49:04,079 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 49511 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 00:49:04,080 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 00:49:04,708 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:49:04,709 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 00:49:04,764 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2025-07-25 00:49:04,772 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 00:49:04,772 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 00:49:04,779 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:49:04,779 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:49:04,779 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 00:49:04,779 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 00:49:05,062 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 00:49:05,066 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:49:05,068 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 00:49:05,069 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 00:49:05,131 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 00:49:05,132 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1029 ms
+2025-07-25 00:49:05,272 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 00:49:05,297 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 00:49:05,310 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 00:49:05,413 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 00:49:05,423 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 00:49:05,515 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45abbd24
+2025-07-25 00:49:05,516 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 00:49:05,550 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 00:49:05,874 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 00:49:05,930 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 00:49:06,028 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 00:49:06,070 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 00:49:06,071 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 00:49:06,157 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 00:49:06,444 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 00:49:06,466 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 00:49:06,473 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 00:49:06,483 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.558 seconds (process running for 2.86)
+2025-07-25 00:49:11,195 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 00:49:11,196 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 00:49:11,198 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 2 ms
+2025-07-25 00:49:11,265 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 00:49:11,293 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 00:49:11,345 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response for process is: {"reference":"9q238203980239","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 00:49:11,346 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ================== the payload sent to enugu for payment is: {"reference":"9q238203980239","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 00:49:12,315 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1] ResponseCode 200
+2025-07-25 00:49:12,317 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1]  OUTPUT STREAM :{"code":"011","response_description":"INVALID ARGUMENTS","content":{"errors":["serviceID is empty","phone is empty","request_id ID is empty"]}}
+2025-07-25 00:49:12,330 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] :::::::::::::::::::::::Electricity process response {"responseCode":"1","responseDesc":"INVALID ARGUMENTS"}
+2025-07-25 00:49:12,352 DEBUG o.h.SQL [http-nio-8100-exec-1] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 01:11:22,062 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:11:22,115 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:11:22,158 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:11:24,143 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:11:24,173 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 59289 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:11:24,174 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:11:24,616 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:11:24,616 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:11:24,688 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:11:24,696 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:11:24,697 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:11:24,704 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:11:24,704 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:11:24,704 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:11:24,705 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:11:24,981 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:11:24,985 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:11:24,985 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:11:24,986 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:11:25,010 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:11:25,010 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 809 ms
+2025-07-25 01:11:25,120 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:11:25,143 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:11:25,155 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:11:25,271 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:11:25,281 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:11:25,359 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4de93edd
+2025-07-25 01:11:25,359 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:11:25,404 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:11:25,734 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:11:25,770 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:11:25,866 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:11:25,907 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:11:25,907 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:11:25,994 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:11:26,277 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:11:26,300 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:11:26,307 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:11:26,317 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.489 seconds (process running for 3.323)
+2025-07-25 01:11:50,115 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:11:50,115 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:11:50,118 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 3 ms
+2025-07-25 01:11:50,186 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:11:50,218 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:12:23,399 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980240","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:12:23,402 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:12:23,420 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response for process is: {"reference":"9q238203980240","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:12:23,424 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ================== the payload sent to enugu for payment is: {"reference":"9q238203980240","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:12:24,926 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 01:12:24,928 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"011","response_description":"INVALID ARGUMENTS","content":{"errors":["serviceID is empty","phone is empty","request_id ID is empty"]}}
+2025-07-25 01:12:24,939 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] :::::::::::::::::::::::Electricity process response {"responseCode":"1","responseDesc":"INVALID ARGUMENTS"}
+2025-07-25 01:12:24,961 DEBUG o.h.SQL [http-nio-8100-exec-3] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 01:15:09,335 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:15:09,339 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:15:09,347 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:15:10,893 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:15:10,926 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 61142 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:15:10,927 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:15:11,421 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:15:11,422 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:15:11,489 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 64 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:15:11,498 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:15:11,498 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:15:11,506 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:15:11,506 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:15:11,506 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:15:11,506 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:15:11,836 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:15:11,840 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:15:11,841 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:15:11,841 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:15:11,864 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:15:11,865 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 912 ms
+2025-07-25 01:15:11,966 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:15:11,987 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:15:11,998 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:15:12,109 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:15:12,119 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:15:12,189 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@57ed02e6
+2025-07-25 01:15:12,190 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:15:12,223 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:15:12,564 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:15:12,632 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:15:12,794 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:15:12,848 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:15:12,848 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:15:12,930 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:15:13,205 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:15:13,226 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:15:13,233 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:15:13,243 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.559 seconds (process running for 3.145)
+2025-07-25 01:15:19,743 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:15:19,744 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:15:19,745 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2025-07-25 01:15:19,817 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980240","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:15:19,846 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:15:25,925 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980241","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:15:25,929 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:15:25,938 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response for process is: {"reference":"9q238203980241","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:15:25,939 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ================== the payload sent to enugu for payment is: {"reference":"9q238203980241","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:15:27,076 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 01:15:27,080 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"011","response_description":"INVALID ARGUMENTS","content":{"errors":["serviceID is empty","phone is empty","request_id ID is empty"]}}
+2025-07-25 01:15:27,100 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] :::::::::::::::::::::::Electricity process response {"errors":["serviceID is empty","phone is empty","request_id ID is empty"],"responseCode":"1","responseDesc":"INVALID ARGUMENTS"}
+2025-07-25 01:15:27,123 DEBUG o.h.SQL [http-nio-8100-exec-3] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 01:43:34,076 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:43:34,090 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:43:34,106 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:43:35,770 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:43:35,797 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 73468 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:43:35,798 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:43:36,246 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:43:36,246 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:43:36,313 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 63 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:43:36,322 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:43:36,323 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:43:36,331 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:43:36,331 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:43:36,331 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:43:36,331 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:43:36,623 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:43:36,626 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:43:36,627 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:43:36,627 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:43:36,647 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:43:36,647 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 821 ms
+2025-07-25 01:43:36,752 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:43:36,773 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:43:36,785 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:43:36,899 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:43:36,913 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:43:37,000 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@53b2e1eb
+2025-07-25 01:43:37,001 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:43:37,030 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:43:37,339 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:43:37,378 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:43:37,469 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:43:37,505 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:43:37,505 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:43:37,593 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:43:37,871 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:43:37,894 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:43:37,901 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:43:37,912 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.293 seconds (process running for 2.966)
+2025-07-25 01:43:44,080 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:43:44,080 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:43:44,081 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2025-07-25 01:43:44,145 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980241","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:43:44,173 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:43:50,085 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980242","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:43:50,087 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:43:50,099 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response for process is: {"reference":"9q238203980242","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:43:50,100 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ================== the payload sent to enugu for payment is: {"request_id":"202507250143vsrU63onvwZFz","serviceID":"ikeja-electric","billersCode":"1111111111111","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 01:43:51,084 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 01:43:51,085 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"028","response_description":"PRODUCT IS NOT WHITELISTED ON YOUR ACCOUNT","content":{"errors":""}}
+2025-07-25 01:47:30,899 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:47:30,908 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:47:30,930 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:47:32,415 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:47:32,448 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 75185 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:47:32,448 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:47:32,907 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:47:32,907 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:47:32,960 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:47:32,969 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:47:32,969 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:47:32,977 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:47:32,977 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:47:32,977 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:47:32,977 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:47:33,263 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:47:33,274 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:47:33,274 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:47:33,274 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:47:33,297 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:47:33,297 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 819 ms
+2025-07-25 01:47:33,410 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:47:33,441 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:47:33,454 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:47:33,595 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:47:33,605 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:47:33,704 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fef5792
+2025-07-25 01:47:33,705 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:47:33,745 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:47:34,079 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:47:34,114 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:47:34,208 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:47:34,251 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:47:34,251 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:47:34,381 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:47:34,687 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:47:34,710 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:47:34,719 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:47:34,729 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.515 seconds (process running for 3.039)
+2025-07-25 01:47:44,778 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:47:44,779 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:47:44,782 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Completed initialization in 2 ms
+2025-07-25 01:47:44,962 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-2] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980242","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:47:45,095 DEBUG o.h.SQL [http-nio-8100-exec-2] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:47:45,166 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] =============================== the response for process is: {"reference":"9q238203980242","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:47:45,167 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] ================== the payload sent to enugu for payment is: {"request_id":"202507250147Blgy6rF2IJUDg","serviceID":"ienugu-electric","billersCode":"1111111111111","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 01:47:46,281 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-2] ResponseCode 200
+2025-07-25 01:47:46,284 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-2]  OUTPUT STREAM :{"code":"012","response_description":"PRODUCT DOES NOT EXIST","content":{"errors":""}}
+2025-07-25 01:52:16,437 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:52:16,455 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:52:16,466 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:52:17,849 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:52:17,883 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 77294 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:52:17,885 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:52:18,375 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:52:18,376 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:52:18,437 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:52:18,445 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:52:18,446 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:52:18,453 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:52:18,454 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:52:18,454 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:52:18,454 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:52:18,733 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:52:18,737 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:52:18,737 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:52:18,737 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:52:18,760 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:52:18,761 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 849 ms
+2025-07-25 01:52:18,865 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:52:18,888 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:52:18,901 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:52:19,014 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:52:19,024 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:52:19,095 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b1420f9
+2025-07-25 01:52:19,095 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:52:19,123 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:52:19,446 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:52:19,476 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:52:19,573 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:52:19,614 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:52:19,614 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:52:19,696 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:52:19,985 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:52:20,015 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:52:20,027 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:52:20,037 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.387 seconds (process running for 2.803)
+2025-07-25 01:52:24,253 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:52:24,254 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:52:24,256 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Completed initialization in 2 ms
+2025-07-25 01:52:24,351 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-2] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980242","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:52:24,380 DEBUG o.h.SQL [http-nio-8100-exec-2] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:52:24,410 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] =============================== the response for process is: {"reference":"9q238203980242","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:52:24,411 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] ================== the payload sent to enugu for payment is: {"request_id":"202507250152gtCkYRNmyRXM8","serviceID":"ienugu-electric","billersCode":"1111111111111","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 01:52:25,532 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-2] ResponseCode 200
+2025-07-25 01:52:25,534 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-2]  OUTPUT STREAM :{"code":"012","response_description":"PRODUCT DOES NOT EXIST","content":{"errors":""}}
+2025-07-25 01:58:55,290 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:58:55,297 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:58:55,339 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:58:56,801 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:58:56,832 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 80263 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:58:56,833 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:58:57,284 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:58:57,284 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:58:57,341 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:58:57,350 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:58:57,351 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:58:57,358 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:58:57,358 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:58:57,358 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:58:57,358 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:58:57,645 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:58:57,649 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:58:57,650 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:58:57,650 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:58:57,677 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:58:57,678 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 808 ms
+2025-07-25 01:58:57,791 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:58:57,823 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:58:57,836 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:58:57,969 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:58:57,978 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:58:58,072 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f7c9755
+2025-07-25 01:58:58,073 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:58:58,112 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:58:58,455 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:58:58,494 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:58:58,593 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:58:58,633 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:58:58,634 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:58:58,717 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:58:59,003 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:58:59,027 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:58:59,035 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:58:59,047 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.459 seconds (process running for 2.871)
+2025-07-25 01:59:03,723 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:59:03,724 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:59:03,727 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 3 ms
+2025-07-25 01:59:03,799 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980242","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:59:03,827 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:59:03,850 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response for process is: {"reference":"9q238203980242","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:59:03,851 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ================== the payload sent to enugu for payment is: {"request_id":"202507250159iLQKqmSUwyzAB","serviceID":"ienugu-electric","billersCode":"1111111111111","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 01:59:04,850 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1] ResponseCode 200
+2025-07-25 01:59:04,851 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1]  OUTPUT STREAM :{"code":"012","response_description":"PRODUCT DOES NOT EXIST","content":{"errors":""}}
+2025-07-25 01:59:04,857 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ====================== process failed
+2025-07-25 01:59:04,864 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] :::::::::::::::::::::::Electricity process response {"responseCode":"1","responseDesc":"PRODUCT DOES NOT EXIST"}
+2025-07-25 01:59:04,888 DEBUG o.h.SQL [http-nio-8100-exec-1] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 01:59:23,512 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:59:23,518 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 01:59:23,525 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 01:59:24,706 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 01:59:24,735 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 80482 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 01:59:24,736 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 01:59:25,260 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:59:25,261 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 01:59:25,322 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2025-07-25 01:59:25,331 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 01:59:25,332 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 01:59:25,341 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:59:25,341 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:59:25,341 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 01:59:25,341 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2025-07-25 01:59:25,639 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 01:59:25,643 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:59:25,644 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 01:59:25,644 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 01:59:25,665 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 01:59:25,666 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 897 ms
+2025-07-25 01:59:25,773 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 01:59:25,790 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 01:59:25,799 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 01:59:25,893 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 01:59:25,903 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 01:59:25,970 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5b1420f9
+2025-07-25 01:59:25,971 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 01:59:25,998 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 01:59:26,331 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 01:59:26,357 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 01:59:26,450 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 01:59:26,493 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 01:59:26,493 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 01:59:26,571 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 01:59:26,862 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 01:59:26,882 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 01:59:26,888 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 01:59:26,898 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.419 seconds (process running for 2.74)
+2025-07-25 01:59:28,975 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 01:59:28,975 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 01:59:28,976 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2025-07-25 01:59:29,035 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980242","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:59:29,060 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:59:34,540 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980243","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 01:59:34,543 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 01:59:34,556 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response for process is: {"reference":"9q238203980243","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 01:59:34,557 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ================== the payload sent to enugu for payment is: {"request_id":"202507250159L60W2cshfJrwf","serviceID":"enugu-electric","billersCode":"1111111111111","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 01:59:35,419 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 01:59:35,422 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"028","response_description":"PRODUCT IS NOT WHITELISTED ON YOUR ACCOUNT","content":{"errors":""}}
+2025-07-25 01:59:35,428 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ====================== process failed
+2025-07-25 01:59:35,435 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] :::::::::::::::::::::::Electricity process response {"responseCode":"1","responseDesc":"PRODUCT IS NOT WHITELISTED ON YOUR ACCOUNT"}
+2025-07-25 01:59:35,456 DEBUG o.h.SQL [http-nio-8100-exec-3] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 02:07:30,436 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-6] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980243","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 02:07:30,438 DEBUG o.h.SQL [http-nio-8100-exec-6] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 02:07:35,437 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-7] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980244","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 02:07:35,438 DEBUG o.h.SQL [http-nio-8100-exec-7] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 02:07:35,443 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-7] =============================== the response for process is: {"reference":"9q238203980244","paymentChannel":"phcnenu","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 02:07:35,444 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-7] ================== the payload sent to enugu for payment is: {"request_id":"202507250207YinTxOu8yzspJ","serviceID":"enugu-electric","billersCode":"1111111111111","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 02:07:47,465 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-7] ResponseCode 200
+2025-07-25 02:07:47,470 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-7]  OUTPUT STREAM :{"code":"000","content":{"transactions":{"status":"delivered","product_name":"Enugu Electric - EEDC","unique_element":"1111111111111","unit_price":"1000","quantity":1,"service_verification":null,"channel":"api","commission":20,"total_amount":980,"discount":null,"type":"Electricity Bill","email":"ebolug2025@gmail.com","phone":"09068666858","name":null,"convinience_fee":0,"amount":"1000","platform":"api","method":"api","transactionId":"17534056565764962631833138","commission_details":{"amount":20,"rate":"2.00","rate_type":"percent","computation_type":"default"}}},"response_description":"TRANSACTION SUCCESSFUL","requestId":"202507250207YinTxOu8yzspJ","amount":1000,"transaction_date":"2025-07-25T01:07:36.000000Z","purchased_code":"Token : 07865700760175033702","exchangeReference":"17386818921470111","arrearsBalance":null,"appliedToArrears":null,"wallet":null,"vat":139.53,"invoiceNumber":"112496625","appliedToWallet":null,"units":34.5,"token":"07865700760175033702","kct1":null,"kct2":null}
+2025-07-25 02:07:47,571 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-7] :::::::::::::::::::::::Electricity process response {"disco":"EEDC","accountType":"prepaid","accountNumber":"1111111111111","amount":"1000.0","mainToken":{"unit":"34.5","amount":"1000","vat":"139.53","token":"07865700760175033702","kctTokens":"null~null"},"externalReference":"202507250207YinTxOu8yzspJ","receiptNo":"112496625","responseCode":"00","errorCode":"00","responseDesc":"SUCCESS","businessUnit":"null","tariff":"null","customerName":"ABULE  EGBA BU ABULE","customerAddress":""}
+2025-07-25 02:07:47,578 DEBUG o.h.SQL [http-nio-8100-exec-7] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 02:16:00,643 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-9] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980245","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 02:16:00,647 DEBUG o.h.SQL [http-nio-8100-exec-9] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 02:16:00,690 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-9] =============================== the response for process is: {"reference":"9q238203980245","paymentChannel":"phcnenu","amount":1000.0,"payerId":"201000000000","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 02:16:00,690 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-9] ================== the payload sent to enugu for payment is: {"request_id":"202507250216VZYKTN1Eaf5RN","serviceID":"enugu-electric","billersCode":"201000000000","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 02:16:13,828 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-9] ResponseCode 200
+2025-07-25 02:16:13,832 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-9]  OUTPUT STREAM :{"code":"000","content":{"transactions":{"status":"pending","product_name":"Enugu Electric - EEDC","unique_element":"201000000000","unit_price":"1000","quantity":1,"service_verification":null,"channel":"api","commission":20,"total_amount":980,"discount":null,"type":"Electricity Bill","email":"ebolug2025@gmail.com","phone":"09068666858","name":null,"convinience_fee":0,"amount":"1000","platform":"api","method":"api","transactionId":"17534061620820272631809796","commission_details":{"amount":20,"rate":"2.00","rate_type":"percent","computation_type":"default"}}},"response_description":"TRANSACTION PROCESSING - PENDING","requestId":"202507250216VZYKTN1Eaf5RN","amount":1000,"transaction_date":"2025-07-25T01:16:02.000000Z","purchased_code":""}
+2025-07-25 02:33:05,376 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 02:33:05,408 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 02:33:05,434 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 02:33:07,146 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 02:33:07,179 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 95127 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 02:33:07,180 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 02:33:07,632 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 02:33:07,632 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 02:33:07,690 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2025-07-25 02:33:07,697 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 02:33:07,698 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 02:33:07,705 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 02:33:07,705 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 02:33:07,705 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 02:33:07,705 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 02:33:08,022 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 02:33:08,026 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 02:33:08,027 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 02:33:08,027 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 02:33:08,047 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 02:33:08,047 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 844 ms
+2025-07-25 02:33:08,160 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 02:33:08,184 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 02:33:08,197 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 02:33:08,307 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 02:33:08,317 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 02:33:08,385 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@60f3239f
+2025-07-25 02:33:08,386 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 02:33:08,428 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 02:33:08,772 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 02:33:08,839 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 02:33:08,943 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 02:33:08,991 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 02:33:08,991 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 02:33:09,074 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 02:33:09,366 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 02:33:09,387 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 02:33:09,394 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 02:33:09,404 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.443 seconds (process running for 2.99)
+2025-07-25 02:33:13,041 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 02:33:13,042 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 02:33:13,043 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2025-07-25 02:33:13,106 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980245","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 02:33:13,142 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 02:33:13,160 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response for process is: {"reference":"9q238203980245","paymentChannel":"phcnenu","amount":1000.0,"payerId":"201000000000","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 02:33:13,161 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ================== the payload sent to enugu for payment is: {"request_id":"202507250233KagJDqYywasPj","serviceID":"enugu-electric","billersCode":"201000000000","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 02:33:13,198 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] :::::::::::::::::::::::Electricity process response {"responseCode":"1","responseDesc":"PERFORM_QUERY_FIRST"}
+2025-07-25 02:33:13,209 DEBUG o.h.SQL [http-nio-8100-exec-1] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 02:33:35,282 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 02:33:35,284 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ========================== the request to vtpas{"billersCode":201000000000,"serviceID":"enugu-electric","type":"prepaid"}
+2025-07-25 02:33:35,284 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ==========++================== start the call the eedc for query
+2025-07-25 02:33:42,303 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 02:33:42,306 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"000","content":{"error":"This meter is not correct or is not a valid ENUGU Electric meter. Please check and try again","WrongBillersCode":true}}
+2025-07-25 02:33:42,307 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response from calling enugu query is: 200 {"code":"000","content":{"error":"This meter is not correct or is not a valid ENUGU Electric meter. Please check and try again","WrongBillersCode":true}}
+2025-07-25 02:33:42,332 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=201000000000, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=00, responseDesc=SUCCESS, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-07-25 02:59:10,736 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 02:59:10,752 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 02:59:10,779 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 02:59:12,483 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 02:59:12,514 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 6731 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 02:59:12,515 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 02:59:12,991 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 02:59:12,992 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 02:59:13,050 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2025-07-25 02:59:13,058 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 02:59:13,059 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 02:59:13,067 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 02:59:13,067 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 02:59:13,067 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 02:59:13,067 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-25 02:59:13,393 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 02:59:13,397 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 02:59:13,398 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 02:59:13,398 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 02:59:13,425 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 02:59:13,426 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 870 ms
+2025-07-25 02:59:13,533 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 02:59:13,554 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 02:59:13,565 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 02:59:13,690 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 02:59:13,699 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 02:59:13,803 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d5ea776
+2025-07-25 02:59:13,803 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 02:59:13,844 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 02:59:14,216 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 02:59:14,277 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 02:59:14,382 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 02:59:14,425 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 02:59:14,425 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 02:59:14,520 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 02:59:14,820 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 02:59:14,849 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 02:59:14,856 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 02:59:14,867 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.58 seconds (process running for 3.234)
+2025-07-25 02:59:19,782 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 02:59:19,783 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 02:59:19,785 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 2 ms
+2025-07-25 02:59:19,844 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 02:59:19,844 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ========================== the request to vtpas{"billersCode":201000000000,"serviceID":"enugu-electric","type":"prepaid"}
+2025-07-25 02:59:19,844 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ==========++================== start the call the eedc for query
+2025-07-25 02:59:26,788 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1] ResponseCode 200
+2025-07-25 02:59:26,790 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1]  OUTPUT STREAM :{"code":"000","content":{"error":"This meter is not correct or is not a valid ENUGU Electric meter. Please check and try again","WrongBillersCode":true}}
+2025-07-25 02:59:26,790 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response from calling enugu query is: 200 {"code":"000","content":{"error":"This meter is not correct or is not a valid ENUGU Electric meter. Please check and try again","WrongBillersCode":true}}
+2025-07-25 02:59:26,872 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=201000000000, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=00, responseDesc=SUCCESS, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-07-25 03:01:04,735 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 03:01:04,740 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 03:01:04,750 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 03:01:06,269 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 03:01:06,298 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 7612 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 03:01:06,298 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 03:01:06,833 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 03:01:06,833 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 03:01:06,894 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2025-07-25 03:01:06,902 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 03:01:06,903 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 03:01:06,910 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 03:01:06,910 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 03:01:06,910 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 03:01:06,910 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 03:01:07,187 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 03:01:07,191 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 03:01:07,192 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 03:01:07,192 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 03:01:07,213 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 03:01:07,214 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 888 ms
+2025-07-25 03:01:07,314 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 03:01:07,336 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 03:01:07,350 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 03:01:07,483 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 03:01:07,492 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 03:01:07,581 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d68be4f
+2025-07-25 03:01:07,582 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 03:01:07,612 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 03:01:07,944 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 03:01:07,985 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 03:01:08,082 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 03:01:08,121 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 03:01:08,121 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 03:01:08,202 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 03:01:08,480 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 03:01:08,502 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 03:01:08,511 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 03:01:08,521 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.622 seconds (process running for 2.985)
+2025-07-25 03:01:17,847 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 03:01:17,848 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 03:01:17,851 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 3 ms
+2025-07-25 03:01:17,919 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 03:01:17,920 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ========================== the request to vtpas{"billersCode":1111111111111,"serviceID":"enugu-electric","type":"prepaid"}
+2025-07-25 03:01:17,920 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ==========++================== start the call the eedc for query
+2025-07-25 03:01:18,875 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1] ResponseCode 200
+2025-07-25 03:01:18,877 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1]  OUTPUT STREAM :{"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-07-25 03:01:18,877 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response from calling enugu query is: 200 {"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-07-25 03:01:18,943 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=1111111111111, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=00, responseDesc=SUCCESS, customerName=TESTIMETER, customerAddress=21A MUYIBAT OYEFUSI IKEJA, businessUnit=Awkunanaw, state=null, email=null, customerArrears=null, minimumPurchase=0, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=R2SD-NMD, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-07-25 03:01:37,026 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980245","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 03:01:37,068 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 03:01:43,447 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-4] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980246","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 03:01:43,449 DEBUG o.h.SQL [http-nio-8100-exec-4] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 03:01:43,456 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-4] =============================== the response for process is: {"reference":"9q238203980246","paymentChannel":"phcnenu","amount":1000.0,"payerId":"201000000000","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 03:01:43,458 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-4] ================== the payload sent to enugu for payment is: {"request_id":"202507250301weFH3SuGuYjd3","serviceID":"enugu-electric","billersCode":"201000000000","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 03:01:56,413 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-4] ResponseCode 200
+2025-07-25 03:01:56,415 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-4]  OUTPUT STREAM :{"code":"000","content":{"transactions":{"status":"pending","product_name":"Enugu Electric - EEDC","unique_element":"201000000000","unit_price":"1000","quantity":1,"service_verification":null,"channel":"api","commission":20,"total_amount":980,"discount":null,"type":"Electricity Bill","email":"ebolug2025@gmail.com","phone":"09068666858","name":null,"convinience_fee":0,"amount":"1000","platform":"api","method":"api","transactionId":"17534089046647372459780623","commission_details":{"amount":20,"rate":"2.00","rate_type":"percent","computation_type":"default"}}},"response_description":"TRANSACTION PROCESSING - PENDING","requestId":"202507250301weFH3SuGuYjd3","amount":1000,"transaction_date":"2025-07-25T02:01:44.000000Z","purchased_code":""}
+2025-07-25 03:01:56,438 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-4] :::::::::::::::::::::::Electricity process response {"disco":"EEDC","accountType":"prepaid","accountNumber":"201000000000","amount":"1000.0","mainToken":{"unit":"null","amount":"1000","vat":"null","kctTokens":"null~null"},"externalReference":"202507250301weFH3SuGuYjd3","responseCode":"00","errorCode":"00","responseDesc":"SUCCESS","businessUnit":"Awkunanaw","tariff":"R2SD-NMD","customerName":"21A MUYIBAT OYEFUSI IKEJA","customerAddress":"0"}
+2025-07-25 03:01:56,511 DEBUG o.h.SQL [http-nio-8100-exec-4] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 03:14:38,038 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 03:14:38,041 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 03:14:38,048 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 03:14:39,422 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 03:14:39,447 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 13621 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 03:14:39,448 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 03:14:39,937 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 03:14:39,938 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 03:14:39,997 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 56 ms. Found 3 JPA repository interfaces.
+2025-07-25 03:14:40,005 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 03:14:40,005 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 03:14:40,012 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 03:14:40,012 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 03:14:40,013 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 03:14:40,013 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 03:14:40,298 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 03:14:40,302 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 03:14:40,303 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 03:14:40,303 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 03:14:40,324 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 03:14:40,325 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 854 ms
+2025-07-25 03:14:40,428 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 03:14:40,451 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 03:14:40,463 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 03:14:40,575 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 03:14:40,586 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 03:14:40,665 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e32037d
+2025-07-25 03:14:40,665 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 03:14:40,693 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 03:14:41,003 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 03:14:41,042 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 03:14:41,140 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 03:14:41,179 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 03:14:41,179 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 03:14:41,276 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 03:14:41,579 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 03:14:41,605 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 03:14:41,613 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 03:14:41,623 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.556 seconds (process running for 2.881)
+2025-07-25 03:14:47,299 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 03:14:47,300 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 03:14:47,302 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 1 ms
+2025-07-25 03:14:47,376 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980246","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 03:14:47,404 DEBUG o.h.SQL [http-nio-8100-exec-1] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 03:14:52,938 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980247","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 03:14:52,941 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 03:14:52,952 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response for process is: {"reference":"9q238203980247","paymentChannel":"phcnenu","amount":1000.0,"payerId":"201000000000","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 03:14:52,954 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ================== the payload sent to enugu for payment is: {"request_id":"202507250314s5ssazaYMf9oU","serviceID":"enugu-electric","billersCode":"201000000000","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 03:15:06,191 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 03:15:06,193 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"000","content":{"transactions":{"status":"pending","product_name":"Enugu Electric - EEDC","unique_element":"201000000000","unit_price":"1000","quantity":1,"service_verification":null,"channel":"api","commission":20,"total_amount":980,"discount":null,"type":"Electricity Bill","email":"ebolug2025@gmail.com","phone":"09068666858","name":null,"convinience_fee":0,"amount":"1000","platform":"api","method":"api","transactionId":"17534096944870163377833357","commission_details":{"amount":20,"rate":"2.00","rate_type":"percent","computation_type":"default"}}},"response_description":"TRANSACTION PROCESSING - PENDING","requestId":"202507250314s5ssazaYMf9oU","amount":1000,"transaction_date":"2025-07-25T02:14:54.000000Z","purchased_code":""}
+2025-07-25 10:16:06,454 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 10:16:06,483 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 10:16:06,492 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 15:27:23,810 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 15:27:23,834 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 26213 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 15:27:23,834 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 15:27:24,322 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 15:27:24,323 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 15:27:24,379 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+2025-07-25 15:27:24,386 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 15:27:24,387 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 15:27:24,398 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 15:27:24,398 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 15:27:24,398 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 15:27:24,398 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 15:27:24,701 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 15:27:24,705 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 15:27:24,706 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 15:27:24,706 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 15:27:24,730 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 15:27:24,731 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 874 ms
+2025-07-25 15:27:24,855 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 15:27:24,880 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 15:27:24,892 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 15:27:25,023 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 15:27:25,034 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 15:27:25,125 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@29db008c
+2025-07-25 15:27:25,125 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 15:27:25,176 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:27:25,529 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 15:27:25,582 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 15:27:25,683 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 15:27:25,721 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 15:27:25,721 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 15:27:25,807 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:27:26,089 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 15:27:26,112 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 15:27:26,121 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 15:27:26,132 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.499 seconds (process running for 2.872)
+2025-07-25 15:31:54,352 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 15:31:54,354 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-07-25 15:31:54,358 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 4 ms
+2025-07-25 15:31:54,454 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 15:31:54,455 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ========================== the request to vtpas{"billersCode":1111111111111,"serviceID":"enugu-electric","type":"prepaid"}
+2025-07-25 15:31:54,455 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ==========++================== start the call the eedc for query
+2025-07-25 15:42:26,507 ERROR c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1] Exception occur :::: 
+java.net.SocketException: Operation timed out
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:330)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.decode(SSLSocketInputRecord.java:160)
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:111)
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1506)
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1421)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+	at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:589)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1451)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1422)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:220)
+	at com.lemonpay.lemonpayvas.electricity.eedc.util.HTTPUtils.doPOSTRequest(HTTPUtils.java:243)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EnuguElectricityService.verify(EnuguElectricityService.java:229)
+	at com.lemonpay.lemonpayvas.electricity.eedc.service.EnuguElectricityService.query(EnuguElectricityService.java:80)
+	at com.lemonpay.lemonpayvas.electricity.service.impl.ElectricityProcessorServiceImpl.query(ElectricityProcessorServiceImpl.java:99)
+	at com.lemonpay.lemonpayvas.electricity.controller.ElectricityController.queryElectricity(ElectricityController.java:25)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:107)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-07-25 15:42:26,530 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response from calling enugu query is: 1 ERROR_OCCURED
+2025-07-25 15:42:26,567 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=null, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=1, responseDesc=ERROR_OCCURED, customerName=null, customerAddress=null, businessUnit=null, state=null, email=null, customerArrears=null, minimumPurchase=null, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=null, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-07-25 15:55:40,969 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 15:55:40,993 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-25 15:55:41,018 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-25 15:55:42,727 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-25 15:55:42,761 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 38343 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-25 15:55:42,761 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-25 15:55:43,246 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 15:55:43,247 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-25 15:55:43,310 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 60 ms. Found 3 JPA repository interfaces.
+2025-07-25 15:55:43,319 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-25 15:55:43,319 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-25 15:55:43,326 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 15:55:43,326 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 15:55:43,326 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-25 15:55:43,326 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-25 15:55:43,679 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-25 15:55:43,683 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-25 15:55:43,684 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-25 15:55:43,684 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-25 15:55:43,712 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-25 15:55:43,713 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 927 ms
+2025-07-25 15:55:43,854 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-25 15:55:43,878 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-25 15:55:43,893 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-25 15:55:44,004 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-25 15:55:44,013 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-25 15:55:44,101 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77b22b05
+2025-07-25 15:55:44,102 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-25 15:55:44,146 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-25 15:55:44,493 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-25 15:55:44,535 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-25 15:55:44,637 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-25 15:55:44,678 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-07-25 15:55:44,678 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-07-25 15:55:44,759 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-25 15:55:45,029 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-25 15:55:45,054 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-25 15:55:45,062 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-25 15:55:45,072 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.494 seconds (process running for 2.976)
+2025-07-25 15:57:53,785 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-25 15:57:53,786 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-07-25 15:57:53,790 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Completed initialization in 4 ms
+2025-07-25 15:57:53,874 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 15:57:53,875 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] ========================== the request to vtpas{"billersCode":1111111111111,"serviceID":"enugu-electric","type":"prepaid"}
+2025-07-25 15:57:53,875 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] ==========++================== start the call the eedc for query
+2025-07-25 15:57:57,051 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-2] ResponseCode 200
+2025-07-25 15:57:57,053 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-2]  OUTPUT STREAM :{"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-07-25 15:57:57,053 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-2] =============================== the response from calling enugu query is: 200 {"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-07-25 15:57:57,166 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-2] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=1111111111111, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=00, responseDesc=SUCCESS, customerName=TESTIMETER, customerAddress=21A MUYIBAT OYEFUSI IKEJA, businessUnit=Awkunanaw, state=null, email=null, customerArrears=null, minimumPurchase=0, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=R2SD-NMD, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-07-25 15:58:10,390 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] ::::::::::::::::::::::::::::::::::::Electricity request{"reference":"9q238203980247","type":"1","channel":"POS","amount":1000.0,"payerId":"201000000000","mobile":"08138390589"}
+2025-07-25 15:58:10,454 DEBUG o.h.SQL [http-nio-8100-exec-3] Select * From vastrans where UNIQUE_TRANSID = ?
+2025-07-25 15:58:10,504 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] =============================== the response for process is: {"reference":"9q238203980247","paymentChannel":"phcnenu","amount":1000.0,"payerId":"201000000000","mobile":"08138390589","type":"1","channel":"POS"}
+2025-07-25 15:58:10,505 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-3] ================== the payload sent to enugu for payment is: {"request_id":"202507251558MVW4uuPbFZnWO","serviceID":"enugu-electric","billersCode":"201000000000","variation_code":"prepaid","amount":1000.0,"phone":8138390589}
+2025-07-25 15:58:23,717 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3] ResponseCode 200
+2025-07-25 15:58:23,721 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-3]  OUTPUT STREAM :{"code":"000","content":{"transactions":{"status":"pending","product_name":"Enugu Electric - EEDC","unique_element":"201000000000","unit_price":"1000","quantity":1,"service_verification":null,"channel":"api","commission":20,"total_amount":980,"discount":null,"type":"Electricity Bill","email":"ebolug2025@gmail.com","phone":"09068666858","name":null,"convinience_fee":0,"amount":"1000","platform":"api","method":"api","transactionId":"17534554924250338372573139","commission_details":{"amount":20,"rate":"2.00","rate_type":"percent","computation_type":"default"}}},"response_description":"TRANSACTION PROCESSING - PENDING","requestId":"202507251558MVW4uuPbFZnWO","amount":1000,"transaction_date":"2025-07-25T14:58:12.000000Z","purchased_code":""}
+2025-07-25 15:58:23,759 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-3] :::::::::::::::::::::::Electricity process response {"disco":"EEDC","accountType":"prepaid","accountNumber":"201000000000","amount":"1000.0","mainToken":{"unit":"null","amount":"1000","vat":"null","kctTokens":"null~null"},"externalReference":"202507251558MVW4uuPbFZnWO","responseCode":"00","errorCode":"00","responseDesc":"SUCCESS","businessUnit":"Awkunanaw","tariff":"R2SD-NMD","customerName":"TESTIMETER","customerAddress":"21A MUYIBAT OYEFUSI IKEJA","minmumPurchase":"21A MUYIBAT OYEFUSI IKEJA"}
+2025-07-25 15:58:23,804 DEBUG o.h.SQL [http-nio-8100-exec-3] insert into vastrans (account,alias,mobile_no,payment_type,response_date,status_description,sub_code,t_address,t_fullname,trans_amount,trans_channel,trans_date,trans_no,trans_note,trans_period,trans_status,trans_type,unique_transid) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+2025-07-25 17:44:55,666 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m5s177ms).
+2025-07-25 18:56:59,519 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h11m3s814ms).
+2025-07-25 19:49:01,275 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=50m31s730ms).
+2025-07-25 19:57:04,179 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m2s900ms).
+2025-07-25 20:16:35,678 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-6] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-07-25 20:16:35,686 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-6] ========================== the request to vtpas{"billersCode":1111111111111,"serviceID":"enugu-electric","type":"prepaid"}
+2025-07-25 20:16:35,686 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-6] ==========++================== start the call the eedc for query
+2025-07-25 20:16:36,718 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-6] ResponseCode 200
+2025-07-25 20:16:36,720 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-6]  OUTPUT STREAM :{"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-07-25 20:16:36,721 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-6] =============================== the response from calling enugu query is: 200 {"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-07-25 20:16:36,748 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-6] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=1111111111111, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=00, responseDesc=SUCCESS, customerName=TESTIMETER, customerAddress=21A MUYIBAT OYEFUSI IKEJA, businessUnit=Awkunanaw, state=null, email=null, customerArrears=null, minimumPurchase=0, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=R2SD-NMD, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-07-25 21:52:05,174 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Retrograde clock change detected (housekeeper delta=29s679ms), soft-evicting connections from pool.

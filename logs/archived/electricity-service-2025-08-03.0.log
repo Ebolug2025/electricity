@@ -1,0 +1,59 @@
+2025-08-03 10:02:01,914 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-08-03 10:02:01,933 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 59945 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-08-03 10:02:01,933 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-08-03 10:02:02,346 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-03 10:02:02,346 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-03 10:02:02,405 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2025-08-03 10:02:02,413 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-08-03 10:02:02,414 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-08-03 10:02:02,422 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-03 10:02:02,423 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-03 10:02:02,423 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-08-03 10:02:02,423 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-08-03 10:02:02,714 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-08-03 10:02:02,718 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-08-03 10:02:02,718 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-08-03 10:02:02,718 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-08-03 10:02:02,739 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-08-03 10:02:02,740 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 790 ms
+2025-08-03 10:02:02,849 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-03 10:02:02,871 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-08-03 10:02:02,883 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-08-03 10:02:03,027 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-03 10:02:03,036 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-08-03 10:02:03,145 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4de93edd
+2025-08-03 10:02:03,146 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-08-03 10:02:03,194 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-08-03 10:02:03,513 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-03 10:02:03,584 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-03 10:02:03,682 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-03 10:02:03,719 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis host: 127.0.0.1
+2025-08-03 10:02:03,719 INFO c.l.l.e.r.r.LemonpayConnectionFactory [main] =========== redis port: 6379
+2025-08-03 10:02:03,796 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-03 10:02:04,065 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-08-03 10:02:04,091 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-08-03 10:02:04,098 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-08-03 10:02:04,108 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.325 seconds (process running for 2.744)
+2025-08-03 10:04:17,146 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-03 10:04:17,146 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Initializing Servlet 'dispatcherServlet'
+2025-08-03 10:04:17,150 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-1] Completed initialization in 4 ms
+2025-08-03 10:04:17,216 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ============================= The electricity query request is: {"reference":"9q238203980239","type":"1","channel":"POS","amount":1000.0,"payerId":"1111111111111","mobile":"08138390589"}
+2025-08-03 10:04:17,217 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ========================== the request to vtpas{"billersCode":1111111111111,"serviceID":"enugu-electric","type":"prepaid"}
+2025-08-03 10:04:17,217 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] ==========++================== start the call the eedc for query
+2025-08-03 10:04:18,461 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1] ResponseCode 200
+2025-08-03 10:04:18,463 INFO c.l.l.e.e.u.HTTPUtils [http-nio-8100-exec-1]  OUTPUT STREAM :{"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-08-03 10:04:18,464 INFO c.l.l.e.e.s.EnuguElectricityService [http-nio-8100-exec-1] =============================== the response from calling enugu query is: 200 {"code":"000","content":{"Customer_Name":"TESTIMETER","Address":"21A MUYIBAT OYEFUSI IKEJA","Account_Number":"1001421167","Meter_Number":"1111111111111","District":"Awkunanaw","Min_Purchase_Amount":0,"Tariff":"R2SD-NMD","KCT1":"","KCT2":"","commission_details":{"amount":null,"rate":"2.00","rate_type":"percent","computation_type":"default"}}}
+2025-08-03 10:04:18,529 INFO c.l.l.e.s.i.ElectricityProcessorServiceImpl [http-nio-8100-exec-1] *********** RESPONSE FROM NODE::::::::::: ElectricityQueryResponse(requestType=null, disco=null, customerType=null, accountNumber=1111111111111, uniqueTransId=null, externalReference=null, gender=null, errorCode=null, responseCode=00, responseDesc=SUCCESS, customerName=TESTIMETER, customerAddress=21A MUYIBAT OYEFUSI IKEJA, businessUnit=Awkunanaw, state=null, email=null, customerArrears=null, minimumPurchase=0, maxPurchase=null, debtRepayment=null, merchantCode=null, tariff=R2SD-NMD, tariffDesc=null, tariffClass=null, orderId=null, unitsPayment=null, units=null, name=null, tariffCode=null, mobile=null, accountStatus=null, vat=null, deductions=0.0)
+2025-08-03 11:39:04,570 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m56s575ms).
+2025-08-03 12:43:37,671 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h4m33s124ms).
+2025-08-03 14:22:50,110 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h39m12s444ms).
+2025-08-03 16:03:37,443 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h40m47s333ms).
+2025-08-03 18:04:56,861 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h1m19s419ms).
+2025-08-03 19:26:31,486 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h21m34s624ms).
+2025-08-03 20:53:19,751 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h26m48s264ms).
+2025-08-03 21:44:37,968 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51m18s218ms).
+2025-08-03 22:31:24,933 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m46s572ms).
+2025-08-03 23:00:54,050 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=29m29s120ms).
+2025-08-03 23:17:58,658 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m34s580ms).
+2025-08-03 23:38:21,038 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m52s338ms).
+2025-08-03 23:58:04,964 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m13s879ms).

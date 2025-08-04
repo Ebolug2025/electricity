@@ -1,5 +1,6 @@
 com/lemonpay/lemonpayvas/electricity/phcnnode/dto/ElectricityQueryRequest.class
 com/lemonpay/lemonpayvas/electricity/phcnnode/dto/PingResponse.class
+com/lemonpay/lemonpayvas/electricity/phcnnode/dto/BonusTokenData.class
 com/lemonpay/lemonpayvas/electricity/phcnnode/dto/ElectricityReQueryRequest.class
 com/lemonpay/lemonpayvas/electricity/phcnnode/dto/ElectricityProcessResponse.class
 com/lemonpay/lemonpayvas/electricity/phcnnode/dto/ElectricityProcessRequest.class

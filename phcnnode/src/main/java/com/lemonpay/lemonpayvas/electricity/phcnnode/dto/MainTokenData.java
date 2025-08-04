@@ -10,6 +10,7 @@ public class MainTokenData {
     private String amount;
     private String vat;
     private String token;
+    private String tokenTax;
     private String fixedCharge;
     private String keyDataSGC;
     private String keyDataTI;

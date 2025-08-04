@@ -1,0 +1,350 @@
+2025-07-23 16:29:20,529 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 16:29:20,624 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-23 16:29:20,633 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-23 16:29:23,347 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 16:29:23,394 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 66629 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 16:29:23,394 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 16:29:23,907 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 16:29:23,907 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 16:29:23,968 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 58 ms. Found 3 JPA repository interfaces.
+2025-07-23 16:29:23,979 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 16:29:23,980 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 16:29:23,989 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 16:29:23,989 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 16:29:23,989 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 16:29:23,989 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 4 ms. Found 0 Redis repository interfaces.
+2025-07-23 16:29:24,308 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 6060 (http)
+2025-07-23 16:29:24,313 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-6060"]
+2025-07-23 16:29:24,314 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 16:29:24,314 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 16:29:24,345 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 16:29:24,345 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 927 ms
+2025-07-23 16:29:24,487 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 16:29:24,523 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 16:29:24,540 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 16:29:24,680 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 16:29:24,690 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 16:29:27,040 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6bfbab1c
+2025-07-23 16:29:27,043 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 16:29:27,724 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 16:29:28,422 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 16:29:28,553 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 16:29:28,596 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-23 16:29:28,963 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-23 16:29:28,988 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-6060"]
+2025-07-23 16:29:28,995 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 6060 (http) with context path '/'
+2025-07-23 16:29:29,005 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 5.847 seconds (process running for 6.364)
+2025-07-23 19:18:42,777 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m43s635ms).
+2025-07-23 19:51:20,565 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=32m37s795ms).
+2025-07-23 20:10:44,682 WARN c.z.h.p.HikariPool [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m24s122ms).
+2025-07-23 20:50:15,300 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 20:50:15,329 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-23 20:50:15,335 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-23 20:50:17,145 ERROR o.s.b.SpringApplication [main] Application run failed
+org.yaml.snakeyaml.parser.ParserException: expected '<document start>', but found '<scalar>'
+ in 'reader', line 9, column 1:
+    spring.datasource.url=jdbc:mysql ... 
+    ^
+
+	at org.yaml.snakeyaml.parser.ParserImpl$ParseDocumentStart.produce(ParserImpl.java:250)
+	at org.yaml.snakeyaml.parser.ParserImpl.peekEvent(ParserImpl.java:161)
+	at org.yaml.snakeyaml.parser.ParserImpl.checkEvent(ParserImpl.java:152)
+	at org.yaml.snakeyaml.composer.Composer.checkNode(Composer.java:105)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.checkData(BaseConstructor.java:149)
+	at org.yaml.snakeyaml.Yaml$1.hasNext(Yaml.java:510)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:203)
+	at org.springframework.beans.factory.config.YamlProcessor.process(YamlProcessor.java:169)
+	at org.springframework.boot.env.OriginTrackedYamlLoader.load(OriginTrackedYamlLoader.java:84)
+	at org.springframework.boot.env.YamlPropertySourceLoader.load(YamlPropertySourceLoader.java:50)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:54)
+	at org.springframework.boot.context.config.StandardConfigDataLoader.load(StandardConfigDataLoader.java:36)
+	at org.springframework.boot.context.config.ConfigDataLoaders.load(ConfigDataLoaders.java:96)
+	at org.springframework.boot.context.config.ConfigDataImporter.load(ConfigDataImporter.java:132)
+	at org.springframework.boot.context.config.ConfigDataImporter.resolveAndLoad(ConfigDataImporter.java:87)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentContributors.withProcessedImports(ConfigDataEnvironmentContributors.java:121)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processInitial(ConfigDataEnvironment.java:245)
+	at org.springframework.boot.context.config.ConfigDataEnvironment.processAndApply(ConfigDataEnvironment.java:232)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:96)
+	at org.springframework.boot.context.config.ConfigDataEnvironmentPostProcessor.postProcessEnvironment(ConfigDataEnvironmentPostProcessor.java:89)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEnvironmentPreparedEvent(EnvironmentPostProcessorApplicationListener.java:109)
+	at org.springframework.boot.env.EnvironmentPostProcessorApplicationListener.onApplicationEvent(EnvironmentPostProcessorApplicationListener.java:94)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:185)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:178)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:156)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:138)
+	at org.springframework.boot.context.event.EventPublishingRunListener.multicastInitialEvent(EventPublishingRunListener.java:136)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:81)
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:64)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:118)
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:112)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:63)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:370)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at com.lemonpay.lemonpayvas.electricity.ElectricityApplication.main(ElectricityApplication.java:10)
+2025-07-23 20:51:37,543 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 20:51:37,561 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 50367 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 20:51:37,562 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 20:51:37,946 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 20:51:37,946 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 20:51:38,000 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2025-07-23 20:51:38,008 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 20:51:38,008 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 20:51:38,014 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 20:51:38,015 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 20:51:38,015 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 20:51:38,015 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-23 20:51:38,301 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-23 20:51:38,305 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-23 20:51:38,305 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 20:51:38,306 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 20:51:38,327 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 20:51:38,327 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 747 ms
+2025-07-23 20:51:38,429 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 20:51:38,454 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 20:51:38,467 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 20:51:38,579 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 20:51:38,591 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 20:51:38,685 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fd92289
+2025-07-23 20:51:38,686 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 20:51:38,724 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-23 20:51:39,037 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 20:51:39,082 DEBUG o.h.SQL [main] create table t_phcn_districts_postpaid (district_id binary(16) not null, account_prefix varchar(255), created date, disco varchar(255), district varchar(255), mobile_merchant_code varchar(255), payoutlet_merchant_code varchar(255), pos_merchant_code varchar(255), ussd_merchant_code varchar(255), web_merchant_code varchar(255), primary key (district_id)) engine=InnoDB
+2025-07-23 20:51:39,111 DEBUG o.h.SQL [main] create table t_phcn_districts_prepaid (district_id binary(16) not null, account_prefix varchar(255), created date, disco varchar(255), district varchar(255), mobile_merchant_code varchar(255), payoutlet_merchant_code varchar(255), pos_merchant_code varchar(255), ussd_merchant_code varchar(255), web_merchant_code varchar(255), primary key (district_id)) engine=InnoDB
+2025-07-23 20:51:39,116 DEBUG o.h.SQL [main] create table vastrans (transid bigint not null auto_increment, account varchar(255), alias varchar(255), merchant_code varchar(20), mobile_no varchar(255), payment_type varchar(255), process_status varchar(255), response_date datetime(6), status_description varchar(255), sub_code varchar(255), t_address varchar(255), t_fullname varchar(255), trans_amount float(53), trans_channel varchar(255), trans_date datetime(6), trans_no varchar(255), trans_note varchar(255), trans_period varchar(255), trans_status varchar(255), trans_type varchar(255), unique_transid varchar(255), primary key (transid)) engine=InnoDB
+2025-07-23 20:51:39,123 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 20:51:39,246 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 20:51:39,313 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-23 20:51:39,700 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-23 20:51:39,724 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-23 20:51:39,732 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-23 20:51:39,742 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.345 seconds (process running for 2.694)
+2025-07-23 21:12:19,447 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:12:19,460 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-23 21:12:19,470 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-23 21:13:34,343 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 21:13:34,357 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 59888 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 21:13:34,358 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:13:34,755 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:13:34,756 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 21:13:34,812 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 52 ms. Found 3 JPA repository interfaces.
+2025-07-23 21:13:34,821 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:13:34,821 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 21:13:34,829 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:13:34,830 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:13:34,830 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:13:34,830 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-23 21:13:35,103 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-23 21:13:35,107 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:13:35,107 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 21:13:35,108 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 21:13:35,127 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 21:13:35,128 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 729 ms
+2025-07-23 21:13:35,229 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 21:13:35,250 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 21:13:35,264 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 21:13:35,370 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 21:13:35,381 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 21:13:35,466 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41bbb219
+2025-07-23 21:13:35,467 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 21:13:35,501 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-23 21:13:35,818 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 21:13:35,858 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:13:35,956 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 21:13:36,006 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-23 21:13:36,382 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-23 21:13:36,412 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:13:36,422 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-23 21:13:36,432 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.227 seconds (process running for 2.539)
+2025-07-23 21:17:18,581 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:17:18,593 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-23 21:17:18,603 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-23 21:17:19,948 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 21:17:20,002 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 61650 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 21:17:20,004 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:17:20,476 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:17:20,477 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 21:17:20,539 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 59 ms. Found 3 JPA repository interfaces.
+2025-07-23 21:17:20,548 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:17:20,548 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 21:17:20,556 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:17:20,556 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:17:20,556 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:17:20,556 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-23 21:17:20,842 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-23 21:17:20,846 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:17:20,846 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 21:17:20,846 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 21:17:20,871 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 21:17:20,871 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 823 ms
+2025-07-23 21:17:20,985 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 21:17:21,011 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 21:17:21,023 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 21:17:21,144 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 21:17:21,155 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 21:17:21,243 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3b576ee3
+2025-07-23 21:17:21,244 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 21:17:21,294 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-23 21:17:21,616 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 21:17:21,655 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:17:21,754 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 21:17:21,798 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-23 21:17:22,163 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-23 21:17:22,185 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:17:22,193 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-23 21:17:22,204 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.489 seconds (process running for 2.864)
+2025-07-23 21:21:24,013 INFO o.a.c.c.C.[.[.[/] [http-nio-8100-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-23 21:21:24,019 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Initializing Servlet 'dispatcherServlet'
+2025-07-23 21:21:24,037 INFO o.s.w.s.DispatcherServlet [http-nio-8100-exec-2] Completed initialization in 18 ms
+2025-07-23 21:23:06,977 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:23:07,016 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-23 21:23:07,028 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-23 21:23:09,609 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 21:23:09,626 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 64229 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 21:23:09,626 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:23:10,023 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:23:10,024 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 21:23:10,082 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2025-07-23 21:23:10,089 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:23:10,090 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 21:23:10,096 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:23:10,096 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:23:10,096 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:23:10,097 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-23 21:23:10,373 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-23 21:23:10,377 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:23:10,378 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 21:23:10,378 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 21:23:10,400 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 21:23:10,400 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 755 ms
+2025-07-23 21:23:10,507 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 21:23:10,530 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 21:23:10,541 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 21:23:10,654 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 21:23:10,669 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 21:23:10,758 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33f81280
+2025-07-23 21:23:10,759 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 21:23:10,792 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-23 21:23:11,117 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 21:23:11,156 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:23:11,257 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 21:23:11,293 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phcnenu': Unsatisfied dependency expressed through field 'lemonpayRedisService': No qualifying bean of type 'com.lemonpay.vasgate.electricity.redisutility.redisservice.LemonpayRedisService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-07-23 21:23:11,293 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:23:11,295 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2025-07-23 21:23:11,298 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2025-07-23 21:23:11,299 INFO o.a.c.c.StandardService [main] Stopping service [Tomcat]
+2025-07-23 21:23:11,309 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-23 21:23:11,318 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field lemonpayRedisService in com.lemonpay.lemonpayvas.electricity.eedc.service.EnuguElectricityService required a bean of type 'com.lemonpay.vasgate.electricity.redisutility.redisservice.LemonpayRedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.lemonpay.vasgate.electricity.redisutility.redisservice.LemonpayRedisService' in your configuration.
+
+2025-07-23 21:23:40,158 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 21:23:40,175 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 64473 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 21:23:40,175 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:23:40,554 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:23:40,554 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 21:23:40,609 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 51 ms. Found 3 JPA repository interfaces.
+2025-07-23 21:23:40,619 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:23:40,619 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 21:23:40,627 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:23:40,627 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:23:40,627 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:23:40,627 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-23 21:23:40,922 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-23 21:23:40,926 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:23:40,926 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 21:23:40,927 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 21:23:40,947 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 21:23:40,948 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 758 ms
+2025-07-23 21:23:41,053 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 21:23:41,075 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 21:23:41,086 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 21:23:41,192 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 21:23:41,204 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 21:23:41,263 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1a8e44fe
+2025-07-23 21:23:41,264 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 21:23:41,288 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-23 21:23:41,622 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 21:23:41,650 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:23:41,748 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 21:23:41,802 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-23 21:23:42,194 INFO o.s.b.a.e.w.EndpointLinksResolver [main] Exposing 1 endpoint beneath base path '/actuator'
+2025-07-23 21:23:42,219 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:23:42,230 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port 8100 (http) with context path '/'
+2025-07-23 21:23:42,240 INFO c.l.l.e.ElectricityApplication [main] Started ElectricityApplication in 2.2 seconds (process running for 2.503)
+2025-07-23 21:25:12,638 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:25:12,643 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2025-07-23 21:25:12,652 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2025-07-23 21:25:15,038 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2025-07-23 21:25:15,058 INFO c.l.l.e.ElectricityApplication [main] Starting ElectricityApplication using Java 17.0.11 with PID 65177 (/Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service/target/classes started by ugochukwuomeje in /Users/ugochukwuomeje/Documents/myprojects/naijapay/lemonpay_electricity_service)
+2025-07-23 21:25:15,058 INFO c.l.l.e.ElectricityApplication [main] No active profile set, falling back to 1 default profile: "default"
+2025-07-23 21:25:15,484 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:25:15,484 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-23 21:25:15,545 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 57 ms. Found 3 JPA repository interfaces.
+2025-07-23 21:25:15,554 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-23 21:25:15,555 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-23 21:25:15,561 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.repository.VasTransRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:25:15,561 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPostpaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:25:15,561 INFO o.s.d.r.c.RepositoryConfigurationExtensionSupport [main] Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.lemonpay.lemonpayvas.electricity.telco.repo.TPhcnDistrictPrepaidRepo; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2025-07-23 21:25:15,561 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+2025-07-23 21:25:15,882 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port 8100 (http)
+2025-07-23 21:25:15,886 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8100"]
+2025-07-23 21:25:15,887 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2025-07-23 21:25:15,887 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.25]
+2025-07-23 21:25:15,915 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2025-07-23 21:25:15,915 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 843 ms
+2025-07-23 21:25:16,035 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-23 21:25:16,056 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.5.2.Final
+2025-07-23 21:25:16,068 INFO o.h.c.i.RegionFactoryInitiator [main] HHH000026: Second-level cache disabled
+2025-07-23 21:25:16,179 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-07-23 21:25:16,188 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2025-07-23 21:25:16,265 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@665ed71a
+2025-07-23 21:25:16,265 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2025-07-23 21:25:16,287 WARN o.h.o.deprecation [main] HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-07-23 21:25:16,604 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-07-23 21:25:16,630 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:25:16,725 INFO o.s.d.j.r.q.QueryEnhancerFactory [main] Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-07-23 21:25:16,757 WARN o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'phcnenu': Unsatisfied dependency expressed through field 'lemonpayRedisService': No qualifying bean of type 'com.lemonpay.vasgate.electricity.redisutility.redisservice.LemonpayRedisService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-07-23 21:25:16,757 INFO o.s.o.j.LocalContainerEntityManagerFactoryBean [main] Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-23 21:25:16,758 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2025-07-23 21:25:16,761 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2025-07-23 21:25:16,762 INFO o.a.c.c.StandardService [main] Stopping service [Tomcat]
+2025-07-23 21:25:16,772 INFO o.s.b.a.l.ConditionEvaluationReportLogger [main] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-07-23 21:25:16,780 ERROR o.s.b.d.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field lemonpayRedisService in com.lemonpay.lemonpayvas.electricity.eedc.service.EnuguElectricityService required a bean of type 'com.lemonpay.vasgate.electricity.redisutility.redisservice.LemonpayRedisService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.lemonpay.vasgate.electricity.redisutility.redisservice.LemonpayRedisService' in your configuration.
+

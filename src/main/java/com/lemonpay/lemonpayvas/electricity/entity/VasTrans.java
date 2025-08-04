@@ -14,8 +14,6 @@ public class VasTrans {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "TRANSID")
     private Long transid;
-    @Column(name = "MERCHANT_CODE", columnDefinition = "varchar(20)")
-    private String merchantCode;
     @Column(name = "ACCOUNT")
     private String account;
     @Column(name = "ALIAS")
@@ -44,8 +42,6 @@ public class VasTrans {
     private String paymentType;
     @Column(name = "T_FULLNAME")
     private String tFullname;
-    @Column(name = "PROCESS_STATUS")
-    private String processStatus;
     @Column(name = "T_ADDRESS")
     private String tAddress;
     @Column(name = "UNIQUE_TRANSID")

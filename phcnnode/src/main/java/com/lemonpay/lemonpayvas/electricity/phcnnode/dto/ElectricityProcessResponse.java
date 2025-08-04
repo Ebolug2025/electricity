@@ -16,7 +16,9 @@ public class ElectricityProcessResponse {
     private String accountNumber;
     private String amount;
     private MainTokenData mainToken;
+    private BonusTokenData bonusToken;
     private List<MainTokenData> otherToken;
+    private List<String> errors;
     private String externalReference;
     private String receiptNo;
     private String responseCode;
@@ -50,5 +52,6 @@ public class ElectricityProcessResponse {
     private String deductions;
     private String payment_method;
     private String transaction_date;
+    private String minmumPurchase;
 
 }
