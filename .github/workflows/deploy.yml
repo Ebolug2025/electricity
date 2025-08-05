@@ -31,9 +31,10 @@ jobs:
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
           cd /home/project/lemonpay-electricity
-         sudo git pull origin main || git clone https://github.com/lemonpayltd/<your-repo>.git .
+         sudo git pull origin development || git clone https://github.com/Ebolug2025/electricity.git
          sudo docker compose down
          sudo docker compose up -d --build
         EOF
+
 
 
