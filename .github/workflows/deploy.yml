@@ -19,8 +19,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    - name: Build project with Maven
-      run: mvn clean package -DskipTests
+    #- name: Build project with Maven
+     # run: mvn clean package -DskipTests
 
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.8.0
@@ -35,3 +35,4 @@ jobs:
           docker compose down
           docker compose up -d --build
         EOF
+
