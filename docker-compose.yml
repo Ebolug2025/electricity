@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  springboot:
+    build: .
+    container_name: lemonpay-app
+    ports:
+      - "8100:8100"
+    restart: always
+    depends_on:
+      - mariadb
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://203.161.48.99:3308/lemonpayvasdb
+      - SPRING_DATASOURCE_USERNAME=lemonpaydbuser
+      - SPRING_DATASOURCE_PASSWORD=test
+
+  mariadb:
+    image: mariadb:10.5
+    container_name: mariadb
+    ports:
+      - "3308:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=test
+      - MYSQL_DATABASE=lemonpayvasdb
+      - MYSQL_USER=lemonpaydbuser
+      - MYSQL_PASSWORD=test
+    restart: always
