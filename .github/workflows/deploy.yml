@@ -30,11 +30,12 @@ jobs:
     - name: Deploy to remote server
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
-          cd /home/project/lemonpay-electricity
+          cd /home/project/lemonpay-electricity && git init
          sudo git pull origin development || git clone https://github.com/Ebolug2025/electricity.git
          sudo docker compose down
          sudo docker compose up -d --build
         EOF
+
 
 
 
