@@ -36,10 +36,11 @@ jobs:
         fi
         cd /home/project/lemonpay-electricity
         git config --global --add safe.directory /home/project/lemonpay-electricity
-        git pull origin main
+        git pull origin development
         docker compose down
         docker compose up -d --build
        EOF
+
 
 
 
