@@ -34,11 +34,13 @@ jobs:
          cd /home/project/lemonpay-electricity || {
          git clone https://github.com/lemonpayltd/lemonpay-electricity.git /home/project/lemonpay-electricity
          cd /home/project/lemonpay-electricity
+         git remote add origin git@github.com:Ebolug2025/electricity.git
          }
          git pull origin development
          docker compose down
          docker compose up -d --build
         EOF
+
 
 
 
