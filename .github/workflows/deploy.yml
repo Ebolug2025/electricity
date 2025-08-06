@@ -30,25 +30,14 @@ jobs:
     - name: Deploy to remote server
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
-          set -e
-
-          PROJECT_DIR="/home/project/lemonpay-electricity"
-          echo "Updating repository..."
-          if [ -d "$PROJECT_DIR/.git" ]; then
-            cd "$PROJECT_DIR"
-            git fetch origin development
-            git reset --hard origin/development
-          else
-            git clone -b development https://github.com/lemonpayltd/lemonpay-electricity.git "$PROJECT_DIR"
-            cd "$PROJECT_DIR"
-          fi
-          echo "Restarting Docker containers..."
-          # Fix Git safe directory warning
-          git config --add safe.directory "$PROJECT_DIR"
-
-          echo "Restarting Docker containers..."
-          docker compose down
-          docker compose up -d --build
+         set -e
+         cd /home/project/lemonpay-electricity || {
+         git clone https://github.com/lemonpayltd/lemonpay-electricity.git /home/project/lemonpay-electricity
+         cd /home/project/lemonpay-electricity
+         }
+         git pull origin development
+         docker compose down
+         docker compose up -d --build
         EOF
 
 
