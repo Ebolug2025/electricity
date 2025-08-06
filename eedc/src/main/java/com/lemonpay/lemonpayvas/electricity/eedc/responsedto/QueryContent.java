@@ -15,5 +15,6 @@ public class QueryContent {
     private String District;
     private String Min_Purchase_Amount;
     private String Tariff;
+    private String error;
     private CommissionDetails commission_details;
 }

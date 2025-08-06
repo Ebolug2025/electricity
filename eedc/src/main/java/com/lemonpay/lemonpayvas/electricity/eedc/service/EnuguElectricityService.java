@@ -156,6 +156,8 @@ public class EnuguElectricityService extends PHCNNode {
 
                 if(processResponse.getContent().getTransactions().getStatus().equalsIgnoreCase(Response.DELIVERED.toString()))
                 {
+                    log.info("================== the requery is delivered that is completed");
+                    //uncomment this and comment the one below
                     String[] redisParam = lemonpayRedisService.getValue(payerId).split("~");
                     lemonpayRedisService.removeAccount(payerId);
                     electricityProcessResponse.setBusinessUnit(redisParam[2]);
@@ -187,26 +189,26 @@ public class EnuguElectricityService extends PHCNNode {
                     }
                 } else if (processResponse.getContent().getTransactions().getStatus().equalsIgnoreCase(Response.INITIATED.toString()) || processResponse.getContent().getTransactions().getStatus().equalsIgnoreCase(Response.PENDING.toString())) {
 
-                    log.info("======================= the tranaction is pending");
+                    log.info("======================= the requery tranaction is pending");
                     electricityProcessResponse.setResponseCode(Response.PENDING.code);
                     electricityProcessResponse.setResponseDesc(Response.PENDING.toString());
 
                     return electricityProcessResponse;
                 }else{
-                    log.info("============================= this transaction failed");
+                    log.info("============================= this requery transaction failed");
                     electricityProcessResponse.setResponseCode(Response.FAILED.code);
                     electricityProcessResponse.setResponseDesc(processResponse.getResponse_description());
 
                     return electricityProcessResponse;
                 }
             }else if (processResponse.getCode().equalsIgnoreCase("099")){
-                log.info("======================= the tranaction is pending");
+                log.info("======================= the requery tranaction is pending");
                 electricityProcessResponse.setResponseCode(Response.PENDING.code);
                 electricityProcessResponse.setResponseDesc(Response.PENDING.toString());
 
                 return electricityProcessResponse;
             }else{
-                log.info("============================= this transaction failed");
+                log.info("============================= this requery transaction failed");
                 electricityProcessResponse.setResponseCode(Response.FAILED.code);
                 electricityProcessResponse.setResponseDesc(processResponse.getResponse_description());
 
@@ -231,13 +233,29 @@ public class EnuguElectricityService extends PHCNNode {
     public ElectricityQueryResponse verify(ElectricityQueryRequest electricityQueryRequest){
 
         Gson gson = new Gson();
+        String type = null;
 
         ElectricityQueryResponse electricityQueryResponse = new ElectricityQueryResponse();
+
+        if(electricityQueryRequest.getType().equalsIgnoreCase("1")){
+
+            type = "prepaid";
+        }else if(electricityQueryRequest.getType().equalsIgnoreCase("2")){
+
+            type = "postpaid";
+        }else{
+
+            electricityQueryResponse = new ElectricityQueryResponse();
+            electricityQueryResponse.setResponseDesc(Response.INVALID_ACCOUNT_METER_TYPE.toString());
+            electricityQueryResponse.setResponseCode(Response.FAILED.code);
+
+            return electricityQueryResponse;
+        }
 
         QueryRequest queryRequest = new QueryRequest();
         queryRequest.setBillersCode(Long.parseLong(electricityQueryRequest.getPayerId()));
         queryRequest.setServiceID(serviceId);
-        queryRequest.setType("prepaid");
+        queryRequest.setType(type);
 
         String request = gson.toJson(queryRequest);
         Map<String, String> headers = new HashMap<>();
@@ -264,22 +282,31 @@ public class EnuguElectricityService extends PHCNNode {
                 EnuguElectricityQueryResponse enuguElectricityQueryResponse = gson.fromJson(response[1], EnuguElectricityQueryResponse.class);
 
                 if (enuguElectricityQueryResponse.getCode().equalsIgnoreCase("000")) {
-                    String address = enuguElectricityQueryResponse.getContent().getAddress();
-                    String minimumPurchase = enuguElectricityQueryResponse.getContent().getMin_Purchase_Amount();
-                    String BusinessUnit = enuguElectricityQueryResponse.getContent().getDistrict();
-                    String customerName = enuguElectricityQueryResponse.getContent().getCustomer_Name();
 
-                    electricityQueryResponse.setResponseCode("00");
-                    electricityQueryResponse.setResponseDesc(Response.SUCCESS.toString());
-                    electricityQueryResponse.setAccountNumber(electricityQueryRequest.getPayerId());
-                    electricityQueryResponse.setBusinessUnit(enuguElectricityQueryResponse.getContent().getDistrict());
-                    electricityQueryResponse.setCustomerAddress(enuguElectricityQueryResponse.getContent().getAddress());
-                    electricityQueryResponse.setCustomerName(customerName);
-                    electricityQueryResponse.setMinimumPurchase(enuguElectricityQueryResponse.getContent().getMin_Purchase_Amount());
-                    electricityQueryResponse.setTariff(enuguElectricityQueryResponse.getContent().getTariff());
+                    if(enuguElectricityQueryResponse.getContent().getError() != null){
 
-                    String redisParam = address + "~" + minimumPurchase + "~" + BusinessUnit + "~" + enuguElectricityQueryResponse.getContent().getTariff()+"~"+customerName;
-                    lemonpayRedisService.setValue(electricityQueryRequest.getPayerId(), redisParam,3600L);
+                        electricityQueryResponse = new ElectricityQueryResponse();
+                        electricityQueryResponse.setResponseDesc(enuguElectricityQueryResponse.getContent().getError());
+                        electricityQueryResponse.setResponseCode(Response.FAILED.code);
+                    }else {
+
+                        String address = enuguElectricityQueryResponse.getContent().getAddress();
+                        String minimumPurchase = enuguElectricityQueryResponse.getContent().getMin_Purchase_Amount();
+                        String BusinessUnit = enuguElectricityQueryResponse.getContent().getDistrict();
+                        String customerName = enuguElectricityQueryResponse.getContent().getCustomer_Name();
+
+                        electricityQueryResponse.setResponseCode("00");
+                        electricityQueryResponse.setResponseDesc(Response.SUCCESS.toString());
+                        electricityQueryResponse.setAccountNumber(electricityQueryRequest.getPayerId());
+                        electricityQueryResponse.setBusinessUnit(enuguElectricityQueryResponse.getContent().getDistrict());
+                        electricityQueryResponse.setCustomerAddress(enuguElectricityQueryResponse.getContent().getAddress());
+                        electricityQueryResponse.setCustomerName(customerName);
+                        electricityQueryResponse.setMinimumPurchase(enuguElectricityQueryResponse.getContent().getMin_Purchase_Amount());
+                        electricityQueryResponse.setTariff(enuguElectricityQueryResponse.getContent().getTariff());
+
+                        String redisParam = address + "~" + minimumPurchase + "~" + BusinessUnit + "~" + enuguElectricityQueryResponse.getContent().getTariff() + "~" + customerName;
+                        lemonpayRedisService.setValue(electricityQueryRequest.getPayerId(), redisParam, 3600L);
+                    }
                 } else {
 
                     electricityQueryResponse = new ElectricityQueryResponse();
@@ -318,9 +345,7 @@ public class EnuguElectricityService extends PHCNNode {
         String payerId = processRequestdto.getBillersCode();
         ElectricityProcessResponse electricityProcessResponse = new ElectricityProcessResponse();
 
-        String redisValue = lemonpayRedisService.getValue("1111111111111");
-
-        //String redisValue = lemonpayRedisService.getValue(payerId);
+        String redisValue = lemonpayRedisService.getValue(payerId);
 
         if(redisValue == null || redisValue.isEmpty()){
 
@@ -346,6 +371,7 @@ public class EnuguElectricityService extends PHCNNode {
                     ElectricityReQueryRequest electricityReQueryRequest = new ElectricityReQueryRequest();
                     electricityReQueryRequest.setReference(processRequestdto.getRequest_id());
                     electricityReQueryRequest.setType(actionType);
+                    //electricityReQueryRequest.setUniqueTransId("202508060042SqWceEdqaviL6");
                     electricityReQueryRequest.setPayerId(electricityProcessRequest.getPayerId());
                     electricityReQueryRequest.setAmount(electricityProcessRequest.getAmount());
 
@@ -369,7 +395,7 @@ public class EnuguElectricityService extends PHCNNode {
                 electricityProcessResponse.setCustomerArrears(processResponse.getArrearsBalance());
                 //electricityProcessResponse.setDeductions(processResponse);
                 electricityProcessResponse.setDisco("EEDC");
-                electricityProcessResponse.setMinmumPurchase(redisParam[0]);
+                electricityProcessResponse.setMinmumPurchase(redisParam[1]);
                 electricityProcessResponse.setCustomerName(redisParam[4]);
                 electricityProcessResponse.setErrorCode("00");
                 //electricityProcessResponse.setFeederBand();
