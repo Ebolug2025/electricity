@@ -35,10 +35,12 @@ jobs:
         git clone https://github.com/lemonpayltd/lemonpay-electricity.git /home/project/lemonpay-electricity
         fi
         cd /home/project/lemonpay-electricity
+        git config --global --add safe.directory /home/project/lemonpay-electricity
         git pull origin main
         docker compose down
         docker compose up -d --build
        EOF
+
 
 
 
