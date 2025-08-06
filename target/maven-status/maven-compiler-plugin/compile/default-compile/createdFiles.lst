@@ -8,6 +8,7 @@ com/lemonpay/lemonpayvas/electricity/dto/ElectricityGenericQueryRequest.class
 com/lemonpay/lemonpayvas/electricity/telco/repo/TPhcnDistrictPostpaidRepo.class
 com/lemonpay/lemonpayvas/electricity/dto/ResponseEnum.class
 com/lemonpay/lemonpayvas/electricity/telco/repo/TPhcnDistrictPrepaidRepo.class
+com/lemonpay/lemonpayvas/electricity/dto/ElectricityGenericRequeryRequest.class
 com/lemonpay/lemonpayvas/electricity/service/ElectricityProcessorService.class
 com/lemonpay/lemonpayvas/electricity/telco/entity/TPhcnDistrictPostpaid.class
 com/lemonpay/lemonpayvas/electricity/dto/ElectricityProcessorRequest.class
