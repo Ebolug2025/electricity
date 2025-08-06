@@ -275,7 +275,7 @@ public class ElectricityProcessorServiceImpl implements ElectricityProcessorServ
             response.setStatus(ResponseEnum.NOT_FOUND.getResponseCode());
 
         }else{
-            //if present check the transaction status
+            //if present check the transaction status/////
             VasTrans vasTrans = optionalTPaytrans.get();
 
             log.info("::::::::::::::::::::::::::::");

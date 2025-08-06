@@ -16,8 +16,8 @@ COPY . .
 
 RUN cd phcnnode && mvn clean install
 RUN cd lemonpayredis && mvn clean install
-RUN cd ekedc && mvn clean install
-RUN cd ikedc && mvn clean install
+# RUN cd ekedc && mvn clean install
+# RUN cd ikedc && mvn clean install
 RUN cd eedc && mvn clean install
 #RUN cd jedc && mvn clean install
 #RUN cd kaedc && mvn clean install
