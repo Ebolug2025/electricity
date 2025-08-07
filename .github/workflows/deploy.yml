@@ -35,12 +35,10 @@ jobs:
          git clone https://github.com/lemonpayltd/lemonpay-electricity.git /home/project/lemonpay-electricity
          cd /home/project/lemonpay-electricity
          git remote add origin git@github.com:Ebolug2025/electricity.git
-         git add .
-         git commit -m "WIP: Local changes before merge"
 
          }
-         git pull origin development
          docker compose down
          docker compose up -d --build
         EOF
+
 
