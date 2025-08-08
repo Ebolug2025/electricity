@@ -30,25 +30,84 @@ jobs:
           set -e
           PROJECT_DIR="/home/project/lemonpay-electricity"
 
-          # Create project directory if it doesn't exist
-          if [ ! -d "$PROJECT_DIR" ]; then
-            git clone git@github.com:lemonpayltd/lemonpay-electricity.git "$PROJECT_DIR"
+          # If repo exists, clean & reset. Otherwise clone fresh.
+          if [ -d "$PROJECT_DIR/.git" ]; then
+            echo " Pulling latest changes..."
+            cd "$PROJECT_DIR"
+            git fetch origin
+            git checkout development
+            git reset --hard origin/development
+            git clean -fd
+          else
+            echo "Cloning repository..."
+            rm -rf "$PROJECT_DIR"
+            git clone --branch development git@github.com:lemonpayltd/lemonpay-electricity.git "$PROJECT_DIR"
+            cd "$PROJECT_DIR"
           fi
 
-          cd "$PROJECT_DIR"
-
-          # Ensure correct branch
-          git fetch origin
-          git checkout development
-          git reset --hard origin/development
-
-          # Make sure docker-compose.yml exists
+          # Check docker-compose.yml
           if [ ! -f docker-compose.yml ]; then
-            echo "docker-compose.yml not found in $PROJECT_DIR"
+            echo " docker-compose.yml not found in $PROJECT_DIR"
             exit 1
           fi
 
-          # Rebuild and restart containers
+          echo " Deploying with Docker Compose..."
+          docker compose down
+          docker compose up -d --build
+        EOFname: Build and Deploy Spring Boot App
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up JDK
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: Set up SSH
+      uses: webfactory/ssh-agent@v0.8.0
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+    - name: Deploy to remote server
+      run: |
+        ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
+          set -e
+          PROJECT_DIR="/home/project/lemonpay-electricity"
+
+          # If repo exists, clean & reset. Otherwise clone fresh.
+          if [ -d "$PROJECT_DIR/.git" ]; then
+            echo " Pulling latest changes..."
+            cd "$PROJECT_DIR"
+            git fetch origin
+            git checkout development
+            git reset --hard origin/development
+            git clean -fd
+          else
+            echo "Cloning repository..."
+            rm -rf "$PROJECT_DIR"
+            git clone --branch development git@github.com:lemonpayltd/lemonpay-electricity.git "$PROJECT_DIR"
+            cd "$PROJECT_DIR"
+          fi
+
+          # Check docker-compose.yml
+          if [ ! -f docker-compose.yml ]; then
+            echo " docker-compose.yml not found in $PROJECT_DIR"
+            exit 1
+          fi
+
+          echo " Deploying with Docker Compose..."
           docker compose down
           docker compose up -d --build
         EOF
