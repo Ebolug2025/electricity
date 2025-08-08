@@ -10,7 +10,7 @@ services:
     depends_on:
       - mariadb
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mariadb://203.161.48.99:3308/lemonpayvasdb
+      - SPRING_DATASOURCE_URL=jdbc:mariadb://203.161.48.99:3306/lemonpayvasdb
       - SPRING_DATASOURCE_USERNAME=lemonpaydbuser
       - SPRING_DATASOURCE_PASSWORD=test
 
