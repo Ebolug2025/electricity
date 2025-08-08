@@ -19,9 +19,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
 
-    #- name: Build project with Maven
-     # run: mvn clean package -DskipTests
-
     - name: Set up SSH
       uses: webfactory/ssh-agent@v0.8.0
       with:
@@ -30,15 +27,28 @@ jobs:
     - name: Deploy to remote server
       run: |
         ssh -o StrictHostKeyChecking=no ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }} << 'EOF'
-         set -e
-         cd /home/project/lemonpay-electricity || {
-         git clone https://github.com/lemonpayltd/lemonpay-electricity.git /home/project/lemonpay-electricity
-         cd /home/project/lemonpay-electricity
-         git remote add origin git@github.com:Ebolug2025/electricity.git
+          set -e
+          PROJECT_DIR="/home/project/lemonpay-electricity"
 
-         }
-         docker compose down
-         docker compose up -d --build
+          # Create project directory if it doesn't exist
+          if [ ! -d "$PROJECT_DIR" ]; then
+            git clone git@github.com:lemonpayltd/lemonpay-electricity.git "$PROJECT_DIR"
+          fi
+
+          cd "$PROJECT_DIR"
+
+          # Ensure correct branch
+          git fetch origin
+          git checkout development
+          git reset --hard origin/development
+
+          # Make sure docker-compose.yml exists
+          if [ ! -f docker-compose.yml ]; then
+            echo "docker-compose.yml not found in $PROJECT_DIR"
+            exit 1
+          fi
+
+          # Rebuild and restart containers
+          docker compose down
+          docker compose up -d --build
         EOF
-
-
